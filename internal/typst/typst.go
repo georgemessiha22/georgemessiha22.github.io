@@ -30,6 +30,17 @@ func escape(s string) string {
 	return r.Replace(s)
 }
 
+// escapeString escapes only the characters special inside a Typst string
+// literal (backslash and double quote). Use this for values placed inside
+// "..." in the template; use escape/emphasize for values in markup contexts.
+func escapeString(s string) string {
+	r := strings.NewReplacer(
+		`\`, `\\`,
+		`"`, `\"`,
+	)
+	return r.Replace(s)
+}
+
 // emphasize escapes text and converts **bold** spans to Typst *bold*.
 func emphasize(s string) string {
 	var b strings.Builder
@@ -48,6 +59,7 @@ func (Renderer) Render(r model.Resume, v model.Variant) ([]render.Artifact, erro
 	t, err := template.New("resume.typ.tmpl").Funcs(template.FuncMap{
 		"esc":  escape,
 		"emph": emphasize,
+		"q":    escapeString,
 	}).ParseFS(tmplFS, "templates/resume.typ.tmpl")
 	if err != nil {
 		return nil, err

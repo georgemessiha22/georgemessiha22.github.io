@@ -2,21 +2,21 @@
 
 #show: resume.with(
   author: (
-    firstname: "{{ esc .Contact.Firstname }}",
-    lastname: "{{ esc .Contact.Lastname }}",
-    email: "{{ esc .Contact.Email }}",
-    phone: "{{ esc .Contact.Phone }}",
+    firstname: "{{ q .Contact.Firstname }}",
+    lastname: "{{ q .Contact.Lastname }}",
+    email: "{{ q .Contact.Email }}",
+    phone: "{{ q .Contact.Phone }}",
 {{- if .Contact.Socials.GitHub }}
-    github: "{{ esc .Contact.Socials.GitHub }}",
+    github: "{{ q .Contact.Socials.GitHub }}",
 {{- end }}
 {{- if .Contact.Socials.GitLab }}
-    gitlab: "{{ esc .Contact.Socials.GitLab }}",
+    gitlab: "{{ q .Contact.Socials.GitLab }}",
 {{- end }}
 {{- if .Contact.Socials.LinkedIn }}
-    linkedin: "{{ esc .Contact.Socials.LinkedIn }}",
+    linkedin: "{{ q .Contact.Socials.LinkedIn }}",
 {{- end }}
-    address: "{{ esc .Contact.Location }}",
-    positions: ("{{ esc .Contact.Title }}",),
+    address: "{{ q .Contact.Location }}",
+    positions: ("{{ q .Contact.Title }}",),
   ),
   profile-picture: image("assets/profile.jpg"),
   date: datetime.today().display(),
@@ -35,10 +35,10 @@
 = Experience
 
 {{ range .Experience }}#resume-entry(
-  title: {{ if .URL }}link("{{ esc .URL }}")[{{ esc .Role }}]{{ else }}"{{ esc .Role }}"{{ end }},
-  location: "{{ esc .Location }}{{ if .Mode }} · {{ esc .Mode }}{{ end }}",
-  date: "{{ esc .Start }}{{ if .End }} - {{ esc .End }}{{ end }}",
-  description: {{ if .OrgURL }}smallcaps(link("{{ esc .OrgURL }}")[{{ esc .Org }}]){{ else }}smallcaps("{{ esc .Org }}"){{ end }},
+  title: {{ if .URL }}link("{{ q .URL }}")[{{ esc .Role }}]{{ else }}"{{ q .Role }}"{{ end }},
+  location: "{{ q .Location }}{{ if .Mode }} · {{ q .Mode }}{{ end }}",
+  date: "{{ q .Start }}{{ if .End }} - {{ q .End }}{{ end }}",
+  description: {{ if .OrgURL }}smallcaps(link("{{ q .OrgURL }}")[{{ esc .Org }}]){{ else }}smallcaps("{{ q .Org }}"){{ end }},
 )
 {{ if or .Intro .Bullets }}#resume-item[
 {{- if .Intro }}
@@ -53,10 +53,10 @@
 = Education
 
 {{ range .Education }}#resume-entry(
-  title: {{ if .URL }}link("{{ esc .URL }}")[{{ esc .Role }}]{{ else }}"{{ esc .Role }}"{{ end }},
-  location: "{{ esc .Location }}",
-  date: "{{ esc .Start }}{{ if .End }} - {{ esc .End }}{{ end }}",
-  description: "{{ esc .Org }}",
+  title: {{ if .URL }}link("{{ q .URL }}")[{{ esc .Role }}]{{ else }}"{{ q .Role }}"{{ end }},
+  location: "{{ q .Location }}",
+  date: "{{ q .Start }}{{ if .End }} - {{ q .End }}{{ end }}",
+  description: "{{ q .Org }}",
 )
 {{ if .Note }}#resume-item[
   _{{ emph .Note }}_
@@ -65,28 +65,28 @@
 {{ end -}}
 = Skills
 
-{{ range .Skills }}#resume-skill-item("{{ esc .Category }}", ({{ range $i, $it := .Items }}{{ if $i }}, {{ end }}"{{ esc $it }}"{{ end }},))
+{{ range .Skills }}#resume-skill-item("{{ q .Category }}", ({{ range $i, $it := .Items }}{{ if $i }}, {{ end }}"{{ q $it }}"{{ end }},))
 {{ end }}
 = Languages
 
-{{ range .Languages }}#resume-skill-item("{{ esc .Name }}", (strong("{{ esc .Level }}"),))
+{{ range .Languages }}#resume-skill-item("{{ q .Name }}", (strong("{{ q .Level }}"),))
 {{ end }}
 = Certificates & Awards
 
 {{ range .Certificates }}#resume-entry(
-  title: {{ if .CertURL }}link("{{ esc .CertURL }}")[{{ esc .Title }}]{{ else }}"{{ esc .Title }}"{{ end }},
-  location: "{{ esc .Location }}",
-  date: "{{ esc .Start }}{{ if .End }} - {{ esc .End }}{{ end }}",
-  description: {{ if .OrgURL }}link("{{ esc .OrgURL }}")[{{ esc .Org }}]{{ else }}"{{ esc .Org }}"{{ end }},
+  title: {{ if .CertURL }}link("{{ q .CertURL }}")[{{ esc .Title }}]{{ else }}"{{ q .Title }}"{{ end }},
+  location: "{{ q .Location }}",
+  date: "{{ q .Start }}{{ if .End }} - {{ q .End }}{{ end }}",
+  description: {{ if .OrgURL }}link("{{ q .OrgURL }}")[{{ esc .Org }}]{{ else }}"{{ q .Org }}"{{ end }},
 )
 {{ end -}}
 {{ if .Activities }}= Activities
 
 {{ range .Activities }}#resume-entry(
-  title: "{{ esc .Role }}",
-  location: "{{ esc .Location }}",
-  date: "{{ esc .Start }}{{ if .End }} - {{ esc .End }}{{ end }}",
-  description: "{{ esc .Org }}",
+  title: "{{ q .Role }}",
+  location: "{{ q .Location }}",
+  date: "{{ q .Start }}{{ if .End }} - {{ q .End }}{{ end }}",
+  description: "{{ q .Org }}",
 )
 {{ if .Intro }}#resume-item[
   {{ emph .Intro }}
