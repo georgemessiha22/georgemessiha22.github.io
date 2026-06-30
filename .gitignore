@@ -7,7 +7,6 @@
 dist/
 
 # Go
-/build/
+/build/gen/
 /site/
 *.test
-*.out

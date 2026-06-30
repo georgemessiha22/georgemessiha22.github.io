@@ -19,10 +19,12 @@ gen:
 
 # LaTeX PDFs (compiled in Docker) from generated .tex.
 resume: gen
+	mkdir -p dist
 	docker run --rm -v $(PWD):/data tex:latest pdflatex -output-directory dist $(GEN)/resume.tex
 	mv dist/resume.pdf dist/George_Messiha_Resume.pdf
 
 detailed: gen
+	mkdir -p dist
 	docker run --rm -v $(PWD):/data tex:latest pdflatex -output-directory dist $(GEN)/resume_detailed.tex
 	mv dist/resume_detailed.pdf dist/George_Messiha_detailed_resume.pdf
 
