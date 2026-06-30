@@ -6,6 +6,11 @@ on:
       - master
       - releases
 
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   release:
     name: Release
@@ -13,18 +18,31 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.26"
+      - name: Test
+        run: go test ./...
       - name: Setup Typst
         uses: typst-community/setup-typst@v3
         with:
           typst-version: "0.15.0"
-      - name: Build
-        run: make all
+      - name: Generate sources
+        run: make gen
+      - name: Build Typst PDFs
+        run: make typst
+      - name: Build LaTeX PDFs
+        run: make build resume detailed
+      - name: Build site
+        run: make site
       - name: Bump version and push tag
         uses: laputansoft/github-tag-action@v4.6
         id: tags
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          tag: ${{ steps.package-version.outputs.version }}
           create_annotated_tag: true
       - name: Release
         uses: softprops/action-gh-release@v2.2.1
@@ -39,3 +57,19 @@ jobs:
             dist/George_Messiha_detailed_resume.pdf
             dist/George_Messiha_Resume_v2.pdf
             dist/George_Messiha_detailed_resume_v2.pdf
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy-pages:
+    name: Deploy Pages
+    needs: release
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
