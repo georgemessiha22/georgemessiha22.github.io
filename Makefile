@@ -1,9 +1,9 @@
 VERSION_TAG=$(shell date +'%y.%m.%d')
 PWD=$(shell pwd)
-
+GEN=build/gen
 TYPST_FONTS=typst/fonts
 
-.PHONY: build bash detailed resume clean all typst typst-resume typst-detailed
+.PHONY: build bash gen resume detailed typst typst-resume typst-detailed site clean all
 
 build:
 	docker build -f build/Dockerfile -t tex:latest -t tex:$(VERSION_TAG) .
@@ -11,27 +11,36 @@ build:
 bash:
 	docker run --rm -it -v $(PWD):/data tex:latest bash
 
-detailed:
-	docker run --rm -v $(PWD):/data tex:latest pdflatex -output-directory dist George_Messiha_detailed_resume.tex
+# Generate all source files (typst + tex, both variants) and the html site.
+gen:
+	go run ./cmd/resume all --input resume.yaml
+	mkdir -p $(GEN)/assets
+	cp pictures/61673.jpg $(GEN)/assets/profile.jpg
 
-resume:
-	docker run --rm -v $(PWD):/data tex:latest pdflatex -output-directory dist George_Messiha_Resume.tex
+# LaTeX PDFs (compiled in Docker) from generated .tex.
+resume: gen
+	docker run --rm -v $(PWD):/data tex:latest pdflatex -output-directory dist $(GEN)/resume.tex
+	mv dist/resume.pdf dist/George_Messiha_Resume.pdf
+
+detailed: gen
+	docker run --rm -v $(PWD):/data tex:latest pdflatex -output-directory dist $(GEN)/resume_detailed.tex
+	mv dist/resume_detailed.pdf dist/George_Messiha_detailed_resume.pdf
+
+# Typst PDFs from generated .typ.
+typst-resume: gen
+	mkdir -p dist
+	typst compile --font-path $(TYPST_FONTS) $(GEN)/resume.typ dist/George_Messiha_Resume_v2.pdf
+
+typst-detailed: gen
+	mkdir -p dist
+	typst compile --font-path $(TYPST_FONTS) $(GEN)/resume_detailed.typ dist/George_Messiha_detailed_resume_v2.pdf
+
+typst: typst-resume typst-detailed
+
+# HTML mini-site (detailed) for GitHub Pages.
+site: gen
 
 clean:
 	rm -f dist/*.aux dist/*.out dist/*.log
 
-# ---------------------------------------------------------------------------
-# Typst (parallel resume version) — uses the local `typst` binary, no Docker.
-# Outputs use a _v2 suffix so they don't collide with the LaTeX PDFs.
-# ---------------------------------------------------------------------------
-typst-resume:
-	mkdir -p dist
-	typst compile --font-path $(TYPST_FONTS) typst/resume.typ dist/George_Messiha_Resume_v2.pdf
-
-typst-detailed:
-	mkdir -p dist
-	typst compile --font-path $(TYPST_FONTS) typst/detailed_resume.typ dist/George_Messiha_detailed_resume_v2.pdf
-
-typst: typst-resume typst-detailed
-
-all: build detailed resume typst clean
+all: build resume detailed typst site clean
