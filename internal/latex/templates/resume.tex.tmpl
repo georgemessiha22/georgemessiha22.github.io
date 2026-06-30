@@ -1,0 +1,87 @@
+\documentclass[10pt,a4paper,sans]{moderncv}
+\usepackage{fontawesome5}
+\usepackage[T1]{fontenc}
+\usepackage{multicol}
+\usepackage[scale=0.8,top=1.9cm, bottom=1.9cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[unicode]{hyperref}
+\definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
+\hypersetup{colorlinks=true, linkcolor=airforceblue, urlcolor=airforceblue}
+\nopagenumbers{}
+\moderncvtheme[grey]{banking}
+\firstname{ {{- esc .Contact.Firstname -}} }
+\familyname{ {{- esc .Contact.Lastname -}} }
+\title{ {{- esc .Contact.Title -}} }
+\address{ {{- esc .Contact.Location -}} }{}
+\mobile{ {{- esc .Contact.Phone -}} }
+\email{ {{- esc .Contact.Email -}} }
+{{- if .Contact.Socials.LinkedIn }}
+\social[linkedin]{ {{- esc .Contact.Socials.LinkedIn -}} }
+{{- end }}
+{{- if .Contact.Socials.GitHub }}
+\social[github]{ {{- esc .Contact.Socials.GitHub -}} }
+{{- end }}
+{{- if .Contact.Socials.GitLab }}
+\social[gitlab]{ {{- esc .Contact.Socials.GitLab -}} }
+{{- end }}
+\begin{document}
+\makecvtitle
+
+\section{\textbf{Professional Summary}}
+\cvitem{}{ {{- emph .Summary -}} }
+
+\section{Experience}
+{{ range .Experience }}\cventry
+  { {{- esc .Start }}{{ if .End }}--{{ esc .End }}{{ end -}} }
+  {\textbf{ {{- esc .Role -}} }}
+  {\textsc{ {{- if .OrgURL }}\href{ {{- esc .OrgURL -}} }{ {{- esc .Org -}} }{{ else }}{{ esc .Org }}{{ end -}} }}
+  { {{- esc .Location -}} }
+  { {{- esc .Mode -}} }
+  {
+{{- if .Intro }}
+{{ emph .Intro }}
+{{- end }}
+{{- if .Bullets }}
+\begin{itemize}
+{{- range .Bullets }}
+  \item {{ emph . }}
+{{- end }}
+\end{itemize}
+{{- end }}
+}
+{{ end }}
+\section{Education}
+{{ range .Education }}\cventry
+  { {{- esc .Start }}{{ if .End }}--{{ esc .End }}{{ end -}} }
+  { {{- if .URL }}\href{ {{- esc .URL -}} }{ {{- esc .Role -}} }{{ else }}{{ esc .Role }}{{ end -}} }
+  { {{- esc .Org -}} }
+  { {{- esc .Location -}} }
+  {}
+  { {{- if .Note }}\textit{ {{- emph .Note -}} }{{ end -}} }
+{{ end }}
+\section{Skills}
+{{ range .Skills }}\cvitem{ {{- esc .Category -}} }{ {{- range $i, $it := .Items }}{{ if $i }}, {{ end }}{{ esc $it }}{{ end -}} }
+{{ end }}
+\section{Languages}
+{{ range .Languages }}\cvitem{ {{- esc .Name -}} }{ {{- esc .Level -}} }
+{{ end }}
+\section{Certificates \& Awards}
+{{ range .Certificates }}\cventry
+  { {{- esc .Start }}{{ if .End }}--{{ esc .End }}{{ end -}} }
+  { {{- if .CertURL }}\href{ {{- esc .CertURL -}} }{ {{- esc .Title -}} }{{ else }}{{ esc .Title }}{{ end -}} }
+  { {{- if .OrgURL }}\href{ {{- esc .OrgURL -}} }{ {{- esc .Org -}} }{{ else }}{{ esc .Org }}{{ end -}} }
+  { {{- esc .Location -}} }
+  {}
+  {}
+{{ end }}
+{{- if .Activities }}\section{Activities}
+{{ range .Activities }}\cventry
+  { {{- esc .Start }}{{ if .End }}--{{ esc .End }}{{ end -}} }
+  { {{- esc .Role -}} }
+  { {{- esc .Org -}} }
+  { {{- esc .Location -}} }
+  {}
+  { {{- emph .Intro -}} }
+{{ end }}{{ end }}
+\end{document}

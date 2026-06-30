@@ -1,0 +1,66 @@
+\documentclass[10pt,a4paper,sans]{moderncv}
+\usepackage{fontawesome5}
+\usepackage[T1]{fontenc}
+\usepackage{multicol}
+\usepackage[scale=0.8,top=1.9cm, bottom=1.9cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[unicode]{hyperref}
+\definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
+\hypersetup{colorlinks=true, linkcolor=airforceblue, urlcolor=airforceblue}
+\nopagenumbers{}
+\moderncvtheme[grey]{banking}
+\firstname{George}
+\familyname{Messiha}
+\title{Lead SWE}
+\address{Dubai, UAE}{}
+\mobile{(+971) 54 555 1032}
+\email{g@example.com}
+\social[linkedin]{georgemessiha22}
+\social[github]{georgemessiha22}
+\begin{document}
+\makecvtitle
+
+\section{\textbf{Professional Summary}}
+\cvitem{}{A summary with \textbf{bold} \& 50\%.}
+
+\section{Experience}
+\cventry
+  {Nov 2023--Present}
+  {\textbf{Senior Software Engineer}}
+  {\textsc{\href{https://hungerstation.com}{HungerStation}}}
+  {Dubai, UAE}
+  {Hybrid}
+  {
+Did things in \textbf{Go}.
+\begin{itemize}
+  \item Built \textbf{Go} services.
+  \item Cut build 60\%.
+\end{itemize}
+}
+
+\section{Education}
+\cventry
+  {2011--2016}
+  {BSc}
+  {GUC}
+  {Cairo, EG}
+  {}
+  {\textit{Thesis: Cloud}}
+
+\section{Skills}
+\cvitem{Languages}{Go, Python}
+
+\section{Languages}
+\cvitem{Arabic}{Native}
+
+\section{Certificates \& Awards}
+\cventry
+  {2024--2024}
+  {\href{https://x/c.pdf}{PM Foundation}}
+  {Google}
+  {}
+  {}
+  {}
+
+\end{document}
