@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>George Messiha — Resume</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div>
+    <h1>George <span class="last">Messiha</span></h1>
+    <div class="title">Lead SWE</div>
+    <div class="contact">
+      Dubai, UAE &middot;
+      <a href="mailto:g@example.com">g@example.com</a> &middot; <a href="https://github.com/georgemessiha22">GitHub</a> &middot; <a href="https://linkedin.com/in/georgemessiha22">LinkedIn</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <h2>Professional Summary</h2>
+  <p>A summary with <strong>bold</strong> &amp; &lt;tags&gt;.</p>
+</section>
+
+<section>
+  <h2>Experience</h2>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-head">
+        <span class="tl-role">Senior Software Engineer</span>
+        <span class="tl-date">Nov 2023 – Present</span>
+      </div>
+      <div class="tl-org"><a href="https://hungerstation.com">HungerStation</a> · Hybrid</div><p>Did things in <strong>Go</strong>.</p><ul><li>Built <strong>Go</strong> services.</li></ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Education</h2>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-head">
+        <span class="tl-role">BSc</span>
+        <span class="tl-date">2011 – 2016</span>
+      </div>
+      <div class="tl-org">GUC · Cairo, EG</div><p><em>Thesis: Cloud</em></p>
+    </div>
+  </div>
+</section>
+
+<section class="skills">
+  <h2>Skills</h2>
+  <div><span class="cat">Languages:</span> Go, Python</div>
+</section>
+
+<section class="skills">
+  <h2>Languages</h2>
+  <div><span class="cat">Arabic:</span> Native</div>
+</section>
+
+<section>
+  <h2>Certificates &amp; Awards</h2>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-head">
+        <span class="tl-role"><a href="https://x/c.pdf">PM Foundation</a></span>
+        <span class="tl-date">2024 – 2024</span>
+      </div>
+      <div class="tl-org">Google</div>
+    </div>
+  </div>
+</section>
+</body>
+</html>
