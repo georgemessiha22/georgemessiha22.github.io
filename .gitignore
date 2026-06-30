@@ -5,3 +5,9 @@
 *.out
 *.synctex.gz
 dist/
+
+# Go
+/build/
+/site/
+*.test
+*.out
