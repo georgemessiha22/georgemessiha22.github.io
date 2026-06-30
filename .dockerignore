@@ -7,3 +7,5 @@ build/Dockerfile
 .gitmodules
 .github/
 signature
+typst/
+docs/

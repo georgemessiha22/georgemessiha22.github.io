@@ -13,6 +13,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Setup Typst
+        uses: typst-community/setup-typst@v3
+        with:
+          typst-version: "0.15.0"
       - name: Build
         run: make all
       - name: Bump version and push tag
@@ -33,3 +37,5 @@ jobs:
           files: |
             dist/George_Messiha_Resume.pdf
             dist/George_Messiha_detailed_resume.pdf
+            dist/George_Messiha_Resume_v2.pdf
+            dist/George_Messiha_detailed_resume_v2.pdf
