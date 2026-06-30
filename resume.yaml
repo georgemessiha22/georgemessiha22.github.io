@@ -1,0 +1,644 @@
+# resume.yaml — single source of truth for the resume generator.
+#
+# Variant tagging:
+#   variants: [summary, detailed]  -> appears in both resumes
+#   variants: [detailed]           -> detailed resume only
+#   (omitted)                      -> appears in both (untagged = both)
+
+contact:
+  firstname: George
+  lastname: Messiha
+  title: Lead Software Engineer
+  email: georgemessiha22@gmail.com
+  phone: (+971) 54 555 1032
+  location: Dubai, UAE
+  photo: pictures/61673.jpg
+  socials:
+    github: georgemessiha22
+    gitlab: georgemessiha22
+    linkedin: georgemessiha22
+
+summary: >-
+  SWE with over 9 years of experience specializing in architecting and scaling
+  business-critical, distributed backend systems in Golang. Proven leader in
+  driving complex technical initiatives, from migrating legacy monoliths to
+  resilient microservice ecosystems to defining technical roadmaps that align
+  with strategic business goals. Expert in setting organization-wide best
+  practices for system design, observability, and high-performance computing.
+  Adept at mentoring senior engineers and guiding multiple teams to solve
+  ambiguous, large-scale technical challenges, directly impacting system
+  performance, developer velocity, and platform stability.
+
+experience:
+  - role: Senior Software Engineer
+    org: HungerStation DeliveryHero Gmbh
+    org_url: https://hungerstation.com
+    location: Dubai, UAE
+    mode: Hybrid
+    start: Nov 2023
+    end: Present
+    intro: >-
+      Engineered and maintained high-throughput microservices using Golang for a
+      large-scale food delivery platform, focusing on system stability and
+      resilience.
+    bullets:
+      - Architected and implemented a new core service in **Go** that streamlined inter-service communication, reducing integration complexities across multiple teams.
+      - Drove significant improvements in the software development lifecycle, achieving a 60% reduction in build times for a key service.
+      - Enhanced system monitoring and tracing capabilities across several distributed systems through collaborative efforts.
+      - Led initiatives to fortify backend systems by implementing comprehensive testing strategies, including functional, integration, chaos, and stress tests.
+    variants: [summary, detailed]
+
+  - role: Lead Software Engineer
+    org: Fincompare
+    org_url: https://www.fincompare.de
+    location: Berlin, Germany
+    mode: Remote
+    start: May 2022
+    end: August 2023
+    intro: >-
+      Led a team of 4 engineers in the strategic migration of a legacy Python
+      Django monolith to a modern, scalable microservices architecture built
+      with Golang.
+    bullets:
+      - Spearheaded the design and development of new, high-performance microservices in Go, successfully extracting critical business logic and data layers from the monolith.
+      - Engineered a seamless data migration from the Django application to the new Go services, ensuring data integrity and zero downtime.
+      - Improved overall system performance by 50% by re-architecting and rewriting obsolete legacy codebases in Golang.
+      - Mentored team members on Go best practices, microservice patterns, and effective testing strategies.
+    variants: [summary, detailed]
+
+  - role: Senior Software Engineer
+    org: Creatio
+    org_url: https://www.creatio.com.au
+    location: North Sydney, Australia
+    mode: Remote
+    start: Mar 2021
+    end: August 2022
+    intro: >-
+      Developing and Maintain Websites and Infrastructure, Helping other team
+      members to reach the customer requirements, and improve their skills
+      through discussions, monitoring and pair programming. Detailed
+      achievements:
+    bullets:
+      - Mentored junior and mid-level engineers through pair programming, code reviews, and technical discussions, improving team-wide skill and delivery quality.
+      - Authored and evangelized new microservice development patterns and standards, leading to their adoption across the engineering organization and resulting in a 25% reduction in downtime.
+    variants: [summary, detailed]
+
+  - role: Senior Software Engineer
+    org: Huspy
+    org_url: https://www.huspy.com
+    location: Dubai, UAE
+    mode: Contract
+    start: Aug 2021
+    end: May 2022
+    intro: >-
+      PropTech that faclitaties house mortgages helping you find the best
+      mortgages in town. Developed, Architect the backend.
+    bullets:
+      - Develop and architect the backend infrastucture.
+      - Create migration plans to keep up with the rapid, fast paced market changes and expansions.
+      - Help with the company new hires onboarding policies.
+    variants: [detailed]
+
+  - role: Senior Software Engineer
+    org: Orange Business Services
+    org_url: https://www.orange-business.com/en
+    location: Cairo, EG
+    mode: Fulltime
+    start: Sep 2018
+    end: Mar 2021
+    intro: >-
+      Developed data-intensive applications and reporting tools for enterprise
+      clients. Built Orange's first automated reporting tool, decreasing report
+      creation time for clients. This is currently Orange's official tool for
+      generating SLA reports.
+    bullets:
+      - Built the company's first automated SLA reporting tool, significantly decreasing report generation time for clients.
+      - Utilized distributed computing frameworks (Hadoop, Spark) to process terabytes of data, with backend components for data retrieval and API access.
+      - Led a team in gathering and cleaning data for clients, identifying ways to improve system efficiency.
+      - Led technical interviews and mentored junior engineers, contributing to the growth of the engineering team.
+    variants: [summary, detailed]
+
+  - role: Software Engineer
+    org: PayMob
+    org_url: https://paymob.com/en
+    location: Cairo, EG
+    mode: Fulltime
+    start: Jul 2017
+    end: Jul 2018
+    intro: >-
+      PayMob is Egypt's largest mobile wallets infrastructure. contributed to
+      the development of the Vodafone Cash Backend, utilizing cloud-based
+      solutions.
+    bullets:
+      - develping cloud-based solutions, ensuring optimal performance and scalability, resulting increase in transaction processing speed.
+      - Incerease the overall software quality by applying testing plans and gate, results increase of 25% of overall quality.
+    variants: [summary, detailed]
+
+  - role: Remote Software Engineer
+    org: Nexus Edge
+    location: Sao Paulo, Brazil
+    mode: Remote Part-time
+    start: Dec 2017
+    intro: >-
+      Developing one of the most cognitive Marketing AI, helping to improve the
+      teams communication, managing the development remotely. Maintaining
+      development cycle.
+    variants: [detailed]
+
+  - role: Software Engineer
+    org: BlueCloud Technologies
+    org_url: https://www.bluecloudcorp.com/
+    location: Cairo, EG
+    mode: Fulltime
+    start: Feb 2017
+    end: Jun 2017
+    intro: >-
+      Designed, developed, and maintained MS-Office extensions using MS .NET
+      technologies.
+    bullets:
+      - Developed and executed comprehensive unit tests, resulting in a 20% reduction in defects identified during Quality Control testing.
+      - Prepared and installed solutions based on well-defined system specifications and standards, ensuring seamless integration with Microsoft Word.
+      - Applied software development concepts such as Software-as-a-Service and Cloud Computing, resulting in a 30% increase in software efficiency and scalability
+    variants: [summary, detailed]
+
+  - role: Software Engineer
+    org: Aprcot
+    location: Cairo, EG
+    mode: Fulltime
+    start: Jun 2016
+    end: Jan 2017
+    intro: >-
+      Building a cutting-edge tool to automate advertising campaigns on major
+      social media platforms including Facebook, Google, Instagram, and YouTube.
+      This innovative tool streamlines campaign management by automatically
+      monitoring campaign progress, generating peak performance notifications,
+      and selecting optimal strategies within budget constraints to achieve
+      predefined targets. The tool leverages machine learning, AI, RESTful APIs,
+      and various applications to optimize campaign outcomes.
+    bullets:
+      - Developed, thoroughly tested, debugged, and maintained the automated campaign management tool.
+    variants: [summary, detailed]
+
+  - role: Junior Teaching Assistant
+    org: The German University in Cairo
+    location: Cairo, EG
+    start: Sep 2015
+    end: Jan 2016
+    intro: >-
+      Helping the Teacher Assistant in the University in teaching Android
+      Application developing. Helping students to do their tasks on time, solving
+      any issues facing them or teach them any required skills.
+    variants: [detailed]
+
+  - role: Network Engineer Trainee
+    org: Orange Egypt
+    url: https://github.com/georgemessiha22/resume/blob/master/Experience/internships/orange/Mobinil_Training_Certificate.PDF
+    location: Cairo, EG
+    start: Jul 2014
+    intro: "Did system provisioning work. Main Duties:"
+    bullets:
+      - Security Analyzer.
+      - Connect remotely to Offices' devices for troubleshooting.
+      - Revise Offices' Firewalls policy.
+    variants: [detailed]
+
+  - role: Sales & Representative Engineer Trainee
+    org: Xerox
+    url: https://github.com/georgemessiha22/resume/blob/master/Experience/internships/xerox/Xerox_Training/Certificate.PDF
+    location: Cairo, EG
+    start: Aug 2014
+    intro: "Did system administrative work. Main Duties:"
+    bullets:
+      - Establish Network connection to Xerox remote Devices.
+      - Maintain IT requirements for the devices to adapt for the network condition.
+      - Build Xerox printer's Applications specially customized for the clients.
+    variants: [detailed]
+
+education:
+  - role: Bachelor of Networks and Information Engineering Technology
+    org: German University in Cairo
+    url: https://github.com/georgemessiha22/resume/blob/master/Education/bachelor/bcs_network_engineer_guc.jpg
+    location: Cairo, EG
+    start: "2011"
+    end: "2016"
+    note: "Thesis: Security of Cloud Computing"
+
+  - role: Thanwya Amma, Math Science
+    org: Saint Fatima International School - Nasr City
+    url: https://github.com/georgemessiha22/resume/blob/master/Education/school/Thanwya_Amma_Certificate.PDF
+    location: Cairo, EG
+    start: "1997"
+    end: "2011"
+
+skills:
+  - category: Language
+    items: [Go, Python, Shell]
+  - category: Web-Frameworks
+    items: [Fiber, Gin, Go-Kit, Django, FastAPI, Flask, gRPC]
+  - category: SysAdmin
+    items:
+      - Linux (Debian, Arch)
+      - Gitlab CI/CD
+      - Docker
+      - Docker-Compose
+      - Continues Delivery
+      - Github Actions
+      - Jenkins
+      - OpenTelemetry
+  - category: Data Science
+    items: [Pandas, NumPy]
+  - category: Services
+    items: [HAProxy, Kubernetes (k8s), Prometheus, Grafana, DataDog, Istio, Traefik]
+  - category: Team Tools
+    items: [Agile, Scrum, XP, Jira, git, Swagger]
+
+languages:
+  - name: Arabic
+    level: Native
+  - name: English
+    level: Fluent
+
+certificates:
+  # ---- Summary set (appears in both resumes) ----
+  - title: Foundation of Project Management
+    org: Google
+    org_url: https://www.coursera.org/professional-certificates/google-project-management
+    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/project_management/foundations_of_project_management.pdf
+    location: Dubai, UAE
+    start: "2024"
+    end: "2024"
+    variants: [summary, detailed]
+
+  - title: Design Thinking for Microservices
+    org: SkillSoft
+    org_url: https://skillsoft.digitalbadges-eu.skillsoft.com/baffdb7e-a4ce-4b3c-aba0-4e15d4c2543e
+    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/skillsoft/design_thinking_for_microservices/3tw0pe4g_badge.png
+    location: Cairo, EG
+    start: "2020"
+    variants: [summary, detailed]
+
+  - title: "PeopleCert DevOps Fundamentals: Effectiveness & efficiency beyond comparison"
+    org: PeopleCert
+    org_url: https://candidate.peoplecert.org/
+    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/peopleCert/e-Cert.pdf
+    location: Cairo, EG
+    start: "2019"
+    variants: [summary, detailed]
+
+  - title: Deep Learning NanoDegree
+    org: Udacity, ITI
+    org_url: https://graduation.udacity.com/confirm/AYS9JCEY
+    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/deep_learning/udacity_deep_learning.pdf
+    location: Cairo, EG
+    start: "2018"
+    variants: [summary, detailed]
+
+  - title: Data Analyst
+    org: Udacity, 1 Million Arab Coder
+    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_analyst/data_analyst.pdf
+    location: Cairo, EG
+    start: "2018"
+    variants: [summary, detailed]
+
+  - title: Data Scientist
+    org: DataCamp
+    org_url: https://www.datacamp.com/
+    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/Tracks/Data Scientist.pdf
+    location: Cairo, EG
+    start: "2017"
+    end: "2018"
+    variants: [summary, detailed]
+
+  # ---- Detailed only ----
+  - title: Android Fundamentals
+    org: Udacity, ITI
+    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/android/Android_certificate.pdf
+    location: Cairo, EG
+    start: "2016"
+    variants: [detailed]
+
+  # DataCamp — Courses (detailed only)
+  - title: Introduction to Databases in Python
+    org: DataCamp
+    org_url: https://www.datacamp.com/
+    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/Introduction to Databases in Python.pdf
+    location: Cairo, EG
+    start: "2017"
+    end: "2018"
+    group: Courses
+    variants: [detailed]
+
+  - title: pandas Foundations
+    org: DataCamp
+    org_url: https://www.datacamp.com/
+    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/pandas Foundations.pdf
+    location: Cairo, EG
+    start: "2017"
+    end: "2018"
+    group: Courses
+    variants: [detailed]
+
+  - title: Importing Data in Python (Part 1)
+    org: DataCamp
+    org_url: https://www.datacamp.com/
+    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/Importing Data in Python (Part 1).pdf
+    location: Cairo, EG
+    start: "2017"
+    end: "2018"
+    group: Courses
+    variants: [detailed]
+
+  - title: Importing Data in Python (Part 2)
+    org: DataCamp
+    org_url: https://www.datacamp.com/
+    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/Importing Data in Python (Part 2).pdf
+    location: Cairo, EG
+    start: "2017"
+    end: "2018"
+    group: Courses
+    variants: [detailed]
+
+  - title: Cleaning Data in Python
+    org: DataCamp
+    org_url: https://www.datacamp.com/
+    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/Cleaning Data in Python.pdf
+    location: Cairo, EG
+    start: "2017"
+    end: "2018"
+    group: Courses
+    variants: [detailed]
+
+  - title: Introduction to Data Visualization with Python
+    org: DataCamp
+    org_url: https://www.datacamp.com/
+    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/Introduction to Data Visualization with Python.pdf
+    location: Cairo, EG
+    start: "2017"
+    end: "2018"
+    group: Courses
+    variants: [detailed]
+
+  - title: Interactive Data Visualization with Bokeh
+    org: DataCamp
+    org_url: https://www.datacamp.com/
+    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/Interactive Data Visualization with Bokeh.pdf
+    location: Cairo, EG
+    start: "2017"
+    end: "2018"
+    group: Courses
+    variants: [detailed]
+
+  - title: Intro to Python for Data Science Course
+    org: DataCamp
+    org_url: https://www.datacamp.com/
+    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/Intro to Python for Data Science Course.pdf
+    location: Cairo, EG
+    start: "2017"
+    end: "2018"
+    group: Courses
+    variants: [detailed]
+
+  - title: Statistical Thinking in Python (Part 1)
+    org: DataCamp
+    org_url: https://www.datacamp.com/
+    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/Statistical Thinking in Python (Part 1).pdf
+    location: Cairo, EG
+    start: "2017"
+    end: "2018"
+    group: Courses
+    variants: [detailed]
+
+  - title: Statistical Thinking in Python (Part 2)
+    org: DataCamp
+    org_url: https://www.datacamp.com/
+    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/Statistical Thinking in Python (Part 2).pdf
+    location: Cairo, EG
+    start: "2017"
+    end: "2018"
+    group: Courses
+    variants: [detailed]
+
+  - title: Python Data Science Toolbox (Part 1)
+    org: DataCamp
+    org_url: https://www.datacamp.com/
+    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/Python Data Science Toolbox (Part 1).pdf
+    location: Cairo, EG
+    start: "2017"
+    end: "2018"
+    group: Courses
+    variants: [detailed]
+
+  - title: Python Data Science Toolbox (Part 2)
+    org: DataCamp
+    org_url: https://www.datacamp.com/
+    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/Python Data Science Toolbox (Part 2).pdf
+    location: Cairo, EG
+    start: "2017"
+    end: "2018"
+    group: Courses
+    variants: [detailed]
+
+  - title: Intro to SQL for Data Science
+    org: DataCamp
+    org_url: https://www.datacamp.com/
+    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/Intro to SQL for Data Science.pdf
+    location: Cairo, EG
+    start: "2017"
+    end: "2018"
+    group: Courses
+    variants: [detailed]
+
+  - title: Intermediate Python for Data Science Course
+    org: DataCamp
+    org_url: https://www.datacamp.com/
+    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/Intermediate Python for Data Science Course.pdf
+    location: Cairo, EG
+    start: "2017"
+    end: "2018"
+    group: Courses
+    variants: [detailed]
+
+  - title: Manipulating DataFrames with pandas
+    org: DataCamp
+    org_url: https://www.datacamp.com/
+    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/Manipulating DataFrames with pandas.pdf
+    location: Cairo, EG
+    start: "2017"
+    end: "2018"
+    group: Courses
+    variants: [detailed]
+
+  - title: Merging DataFrames with pandas
+    org: DataCamp
+    org_url: https://www.datacamp.com/
+    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/Merging DataFrames with pandas.pdf
+    location: Cairo, EG
+    start: "2017"
+    end: "2018"
+    group: Courses
+    variants: [detailed]
+
+  - title: Network Analysis in Python (Part 1)
+    org: DataCamp
+    org_url: https://www.datacamp.com/
+    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/Network Analysis in Python (Part 1).pdf
+    location: Cairo, EG
+    start: "2017"
+    end: "2018"
+    group: Courses
+    variants: [detailed]
+
+  - title: Machine Learning with the Experts_ School Budgets
+    org: DataCamp
+    org_url: https://www.datacamp.com/
+    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/Machine Learning with the Experts_ School Budgets.pdf
+    location: Cairo, EG
+    start: "2017"
+    end: "2018"
+    group: Courses
+    variants: [detailed]
+
+  - title: Supervised Learning with scikit-learn Course
+    org: DataCamp
+    org_url: https://www.datacamp.com/
+    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/Supervised Learning with scikit-learn Course.pdf
+    location: Cairo, EG
+    start: "2017"
+    end: "2018"
+    group: Courses
+    variants: [detailed]
+
+  - title: Unsupervised Learning in Python Course
+    org: DataCamp
+    org_url: https://www.datacamp.com/
+    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/Unsupervised Learning in Python Course.pdf
+    location: Cairo, EG
+    start: "2017"
+    end: "2018"
+    group: Courses
+    variants: [detailed]
+
+  - title: Deep Learning in Python
+    org: DataCamp
+    org_url: https://www.datacamp.com/
+    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/Deep Learning in Python.pdf
+    location: Cairo, EG
+    start: "2017"
+    end: "2018"
+    group: Courses
+    variants: [detailed]
+
+  # DataCamp — Tracks (detailed only)
+  - title: Python Programming
+    org: DataCamp
+    org_url: https://www.datacamp.com/
+    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/Tracks/Python Programming.pdf
+    location: Cairo, EG
+    start: "2017"
+    end: "2018"
+    group: Tracks
+    variants: [detailed]
+
+  - title: Python Programmer
+    org: DataCamp
+    org_url: https://www.datacamp.com/
+    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/Tracks/Python Programmer.pdf
+    location: Cairo, EG
+    start: "2017"
+    end: "2018"
+    group: Tracks
+    variants: [detailed]
+
+  - title: Importing Cleaning Data with Python
+    org: DataCamp
+    org_url: https://www.datacamp.com/
+    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/Tracks/Importing _ Cleaning Data with Python .pdf
+    location: Cairo, EG
+    start: "2017"
+    end: "2018"
+    group: Tracks
+    variants: [detailed]
+
+  - title: Data Manipulation with Python
+    org: DataCamp
+    org_url: https://www.datacamp.com/
+    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/Tracks/Data Manipulation with Python.pdf
+    location: Cairo, EG
+    start: "2017"
+    end: "2018"
+    group: Tracks
+    variants: [detailed]
+
+  - title: Data Analyst with Python
+    org: DataCamp
+    org_url: https://www.datacamp.com/
+    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/Tracks/Data Analyst with Python.pdf
+    location: Cairo, EG
+    start: "2017"
+    end: "2018"
+    group: Tracks
+    variants: [detailed]
+
+  - title: Machine Learning with Python Track
+    org: DataCamp
+    org_url: https://www.datacamp.com/
+    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/Tracks/Machine Learning with Python Track.pdf
+    location: Cairo, EG
+    start: "2017"
+    end: "2018"
+    group: Tracks
+    variants: [detailed]
+
+  - title: Data Science
+    org: DataCamp
+    org_url: https://www.datacamp.com/
+    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/Tracks/Data Scientist .pdf
+    location: Cairo, EG
+    start: "2017"
+    end: "2018"
+    group: Tracks
+    variants: [detailed]
+
+activities:
+  - role: Charitable NGO
+    org: Masabeeh
+    location: Cairo, EG
+    start: May 2016
+    end: "2017"
+    intro: >-
+      Organizing weekly meetings for kids in Masr Gedida. Prepare workshops of
+      games and help them with school. on other hand teach them to spell and
+      wirte.
+    variants: [detailed]
+
+  - role: Voluntary Education
+    org: Math Teacher
+    location: Cairo, EG
+    start: Sept
+    end: Dec 2015
+    intro: >-
+      Providing Education for kids from rural areas. Teaching Math for fifth
+      primary students. Teaching English for second primary students.
+    variants: [detailed]
+
+  - role: Culture Awareness Charitable NGO
+    org: APE (Association for Protection of Environment)
+    location: Cairo, EG
+    start: "2013"
+    end: "2015"
+    intro: >-
+      Organizing camps for kids from rural areas. Prepare workshops that teach
+      them some crafts. Give presentations about: culture awareness, selfSteem,
+      goals and human development.
+    variants: [detailed]
+
+  - role: Educational Charitable NGO
+    org: EASE
+    location: Cairo, EG
+    start: Jan 2012
+    end: May 2012
+    intro: >-
+      Organizing camps for High School Students. Role: Presenter. To Educate the
+      High School Students more about life experiences and prepare them to face
+      the future.
+    variants: [detailed]
