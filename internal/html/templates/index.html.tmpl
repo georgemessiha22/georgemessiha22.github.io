@@ -31,12 +31,14 @@
 </header>
 
 {{- if .ReleasesURL }}
-<nav class="downloads" aria-label="Download résumé PDFs">
-  <span class="downloads-label">Download PDF:</span>
+<nav class="downloads" aria-label="Download résumé">
+  <span class="downloads-label">Download:</span>
   <a class="dl-btn" href="{{ .ReleasesURL }}/George_Messiha_Resume.pdf">Résumé</a>
   <a class="dl-btn" href="{{ .ReleasesURL }}/George_Messiha_detailed_resume.pdf">Detailed</a>
   <a class="dl-btn dl-alt" href="{{ .ReleasesURL }}/George_Messiha_Resume_v2.pdf">Résumé (Typst)</a>
   <a class="dl-btn dl-alt" href="{{ .ReleasesURL }}/George_Messiha_detailed_resume_v2.pdf">Detailed (Typst)</a>
+  <a class="dl-btn dl-alt" href="{{ .ReleasesURL }}/George_Messiha_Resume.md">Résumé (MD)</a>
+  <a class="dl-btn dl-alt" href="{{ .ReleasesURL }}/George_Messiha_detailed_resume.md">Detailed (MD)</a>
 </nav>
 {{- end }}
 

@@ -68,11 +68,13 @@ func TestRenderMiniSite(t *testing.T) {
 	if string(index) != string(want) {
 		t.Fatalf("index.html differs from golden; run with -update if intended")
 	}
-	// Download bar links to the release PDFs.
+	// Download bar links to the release PDFs and Markdown files.
 	for _, want := range []string{
 		`class="downloads"`,
 		"https://github.com/example/example/releases/latest/download/George_Messiha_Resume.pdf",
 		"https://github.com/example/example/releases/latest/download/George_Messiha_detailed_resume_v2.pdf",
+		"https://github.com/example/example/releases/latest/download/George_Messiha_Resume.md",
+		"https://github.com/example/example/releases/latest/download/George_Messiha_detailed_resume.md",
 	} {
 		if !strings.Contains(string(index), want) {
 			t.Fatalf("index.html missing %q", want)
