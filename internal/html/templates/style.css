@@ -9,6 +9,15 @@ header.top h1 .last { color: var(--accent); }
 .title { color: var(--accent); font-weight: 600; }
 .contact { color: var(--muted); font-size: .9rem; margin-top: .25rem; }
 .contact a { color: var(--accent); text-decoration: none; }
+.downloads { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem;
+  margin: 1rem 0 .25rem; }
+.downloads-label { color: var(--muted); font-size: .85rem; font-weight: 600; margin-right: .25rem; }
+.dl-btn { display: inline-block; padding: .35rem .8rem; font-size: .85rem; font-weight: 600;
+  color: #fff; background: var(--accent); border-radius: 4px; text-decoration: none;
+  border: 1px solid var(--accent); }
+.dl-btn:hover { filter: brightness(1.08); }
+.dl-btn.dl-alt { color: var(--accent); background: transparent; }
+.dl-btn.dl-alt:hover { background: rgba(47,95,166,.08); }
 h2 { color: var(--accent); border-bottom: 1px solid var(--line); padding-bottom: .25rem; margin-top: 2rem; }
 .timeline { position: relative; margin-left: 1rem; padding-left: 1.25rem; border-left: 2px solid var(--line); }
 .tl-item { position: relative; margin-bottom: 1.25rem; }
@@ -21,4 +30,4 @@ h2 { color: var(--accent); border-bottom: 1px solid var(--line); padding-bottom:
 .tl-item ul { margin: .4rem 0 0; padding-left: 1.1rem; }
 .skills div { margin: .2rem 0; }
 .skills .cat { font-weight: 600; }
-@media print { body { padding: 0; } a { color: var(--ink); } }
+@media print { body { padding: 0; } a { color: var(--ink); } .downloads { display: none; } }

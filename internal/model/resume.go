@@ -78,6 +78,10 @@ type Resume struct {
 	Languages    []Language
 	Certificates []Cert
 	Activities   []Entry
+	// ReleasesURL is the base URL for downloadable release assets, e.g.
+	// "https://github.com/owner/repo/releases/latest/download". When set, the
+	// HTML site shows PDF download links. Optional.
+	ReleasesURL string
 }
 
 func includesVariant(vs []Variant, v Variant) bool {

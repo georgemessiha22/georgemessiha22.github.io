@@ -32,10 +32,14 @@ into each format via independent engine packages (`internal/typst`,
     renderer converts it (`*bold*` in Typst, `\textbf{}` in LaTeX, `**bold**` in
     Markdown, `<strong>` in HTML).
 4. **Replace the photo** at `pictures/61673.jpg` (or change `contact.photo`).
-5. **Generate locally** (see Usage). Commit and push to `master`; the release
+5. **Set `releases_url`** (top-level in `resume.yaml`) to
+   `https://github.com/<you>/<repo>/releases/latest/download` — the HTML site
+   shows PDF download buttons pointing at your latest release. Omit it to hide
+   the buttons.
+6. **Generate locally** (see Usage). Commit and push to `master`; the release
    workflow builds the PDFs, attaches them to a GitHub Release, and deploys the
    site to Pages.
-6. **Enable GitHub Pages**: repo Settings → Pages → Source = "GitHub Actions"
+7. **Enable GitHub Pages**: repo Settings → Pages → Source = "GitHub Actions"
    (one-time step, required for the deploy job to publish the site).
 
 ## Usage

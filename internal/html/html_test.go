@@ -4,6 +4,7 @@ import (
 	"flag"
 	"os"
 	"path/filepath"
+	"strings"
 	"testing"
 
 	"github.com/georgemessiha22/georgemessiha22/internal/model"
@@ -30,6 +31,7 @@ func fixture() model.Resume {
 		Skills:       []model.SkillGroup{{Category: "Languages", Items: []string{"Go", "Python"}}},
 		Languages:    []model.Language{{Name: "Arabic", Level: "Native"}},
 		Certificates: []model.Cert{{Title: "PM Foundation", Org: "Google", CertURL: "https://x/c.pdf", Start: "2024", End: "2024"}},
+		ReleasesURL:  "https://github.com/example/example/releases/latest/download",
 	}
 }
 
@@ -65,5 +67,29 @@ func TestRenderMiniSite(t *testing.T) {
 	}
 	if string(index) != string(want) {
 		t.Fatalf("index.html differs from golden; run with -update if intended")
+	}
+	// Download bar links to the release PDFs.
+	for _, want := range []string{
+		`class="downloads"`,
+		"https://github.com/example/example/releases/latest/download/George_Messiha_Resume.pdf",
+		"https://github.com/example/example/releases/latest/download/George_Messiha_detailed_resume_v2.pdf",
+	} {
+		if !strings.Contains(string(index), want) {
+			t.Fatalf("index.html missing %q", want)
+		}
+	}
+}
+
+func TestRenderMiniSite_NoDownloadsWhenNoReleasesURL(t *testing.T) {
+	f := fixture()
+	f.ReleasesURL = ""
+	got, err := Renderer{}.Render(f, model.Detailed)
+	if err != nil {
+		t.Fatal(err)
+	}
+	for _, a := range got {
+		if a.RelPath == "index.html" && strings.Contains(string(a.Bytes), "class=\"downloads\"") {
+			t.Fatalf("download bar should be absent when ReleasesURL is empty")
+		}
 	}
 }
