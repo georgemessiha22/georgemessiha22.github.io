@@ -5,6 +5,10 @@ on:
     branches:
       - master
       - releases
+    paths-ignore:
+      - '**/*.md'
+      - 'docs/**'
+      - 'LICENSE'
 
 permissions:
   contents: write
@@ -20,32 +24,29 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: recursive
+
       - name: Setup Go
         uses: actions/setup-go@v5
         with:
           go-version: "1.26"
       - name: Test
         run: go test ./...
+
       - name: Setup Typst
         uses: typst-community/setup-typst@v3
         with:
           typst-version: "0.15.0"
-      - name: Generate sources
-        run: make gen
-      - name: Build Typst PDFs
-        run: make typst
-      - name: Build LaTeX PDFs
-        run: make build resume detailed
-      - name: Build Markdown
-        run: make md
-      - name: Build site
-        run: make site
+
+      - name: Build all artifacts (PDFs, Markdown, site)
+        run: make all
+
       - name: Bump version and push tag
         uses: laputansoft/github-tag-action@v4.6
         id: tags
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           create_annotated_tag: true
+
       - name: Release
         uses: softprops/action-gh-release@v2.2.1
         with:
@@ -61,6 +62,7 @@ jobs:
             dist/George_Messiha_detailed_resume_v2.pdf
             dist/George_Messiha_Resume.md
             dist/George_Messiha_detailed_resume.md
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
