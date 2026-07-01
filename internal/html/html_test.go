@@ -111,6 +111,31 @@ func TestRender_NoBlogNavWhenNoBlogDir(t *testing.T) {
 	}
 }
 
+func TestRender_NoBlogNavWhenBlogDirEmpty(t *testing.T) {
+	// A blog dir that exists but yields no posts (e.g. only a .gitkeep file, or
+	// folders without an index.md) must behave like having no blog at all.
+	dir := t.TempDir()
+	if err := os.WriteFile(filepath.Join(dir, ".gitkeep"), nil, 0o644); err != nil {
+		t.Fatal(err)
+	}
+	if err := os.MkdirAll(filepath.Join(dir, "not-a-post"), 0o755); err != nil {
+		t.Fatal(err)
+	}
+
+	got, err := Renderer{BlogDir: dir}.Render(fixture(), model.Detailed)
+	if err != nil {
+		t.Fatal(err)
+	}
+	for _, a := range got {
+		if a.RelPath == "index.html" && strings.Contains(string(a.Bytes), `class="site-nav"`) {
+			t.Fatalf("nav should be absent when the blog dir has no posts")
+		}
+		if strings.HasPrefix(a.RelPath, "blog/") {
+			t.Fatalf("no blog artifacts expected, got %q", a.RelPath)
+		}
+	}
+}
+
 func TestRender_WithBlog(t *testing.T) {
 	dir := t.TempDir()
 	postDir := filepath.Join(dir, "hello-world")
