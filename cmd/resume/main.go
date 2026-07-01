@@ -25,13 +25,14 @@ Commands:
   typst   Generate Typst (.typ) source
   tex     Generate LaTeX (.tex) source
   md      Generate Markdown (.md) source
-  html    Generate the HTML mini-site
+  html    Generate the HTML site (résumé home + blog)
   all     Generate typst+tex+md (both variants) and the html site
 
 Flags:
   --input   path to YAML (default resume.yaml)
   --variant summary|detailed (default summary; html forces detailed)
   --out     output directory (default build/gen; site default site)
+  --blog    blog posts directory (default blog) for the html site
 `)
 }
 
@@ -45,15 +46,16 @@ func main() {
 	input := fs.String("input", "resume.yaml", "path to YAML input")
 	variant := fs.String("variant", "summary", "summary|detailed")
 	out := fs.String("out", "", "output directory")
+	blog := fs.String("blog", "blog", "directory of blog/<slug>/index.md posts (html/all)")
 	_ = fs.Parse(os.Args[2:])
 
-	if err := run(cmd, *input, *variant, *out); err != nil {
+	if err := run(cmd, *input, *variant, *out, *blog); err != nil {
 		fmt.Fprintln(os.Stderr, "error:", err)
 		os.Exit(1)
 	}
 }
 
-func run(cmd, input, variant, out string) error {
+func run(cmd, input, variant, out, blogDir string) error {
 	r, err := config.Load(input)
 	if err != nil {
 		return err
@@ -70,7 +72,7 @@ func run(cmd, input, variant, out string) error {
 	case "md":
 		return generate(markdown.Renderer{}, r, parseVariant(variant), pick(out, defGen))
 	case "html":
-		return generate(html.Renderer{}, r, model.Detailed, pick(out, defSite))
+		return generate(html.Renderer{BlogDir: blogDir}, r, model.Detailed, pick(out, defSite))
 	case "all":
 		if err := generate(typst.Renderer{}, r, model.Summary, defGen); err != nil {
 			return err
@@ -90,7 +92,7 @@ func run(cmd, input, variant, out string) error {
 		if err := generate(markdown.Renderer{}, r, model.Detailed, defGen); err != nil {
 			return err
 		}
-		return generate(html.Renderer{}, r, model.Detailed, defSite)
+		return generate(html.Renderer{BlogDir: blogDir}, r, model.Detailed, defSite)
 	default:
 		usage()
 		return fmt.Errorf("unknown command %q", cmd)

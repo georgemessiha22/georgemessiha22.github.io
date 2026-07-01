@@ -36,6 +36,7 @@ func fixture() model.Resume {
 			Title: "PM Foundation", Org: "Google", CertURL: "https://x/c.pdf",
 			Start: "2024", End: "2024",
 		}},
+		SiteURL: "https://example.github.io",
 	}
 }
 

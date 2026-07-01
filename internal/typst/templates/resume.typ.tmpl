@@ -6,6 +6,9 @@
     lastname: "{{ q .Contact.Lastname }}",
     email: "{{ q .Contact.Email }}",
     phone: "{{ q .Contact.Phone }}",
+{{- if .SiteURL }}
+    homepage: "{{ q .SiteURL }}",
+{{- end }}
 {{- if .Contact.Socials.GitHub }}
     github: "{{ q .Contact.Socials.GitHub }}",
 {{- end }}

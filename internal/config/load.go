@@ -33,6 +33,8 @@ type yamlResume struct {
 	Languages    []yamlLang  `yaml:"languages"`
 	Certificates []yamlCert  `yaml:"certificates"`
 	Activities   []yamlEntry `yaml:"activities"`
+	ReleasesURL  string      `yaml:"releases_url"`
+	SiteURL      string      `yaml:"site_url"`
 }
 
 type yamlEntry struct {
@@ -126,10 +128,12 @@ func Load(path string) (model.Resume, error) {
 				LinkedIn: y.Contact.Socials.LinkedIn,
 			},
 		},
-		Summary:    y.Summary,
-		Experience: toEntries(y.Experience),
-		Education:  toEntries(y.Education),
-		Activities: toEntries(y.Activities),
+		Summary:     y.Summary,
+		Experience:  toEntries(y.Experience),
+		Education:   toEntries(y.Education),
+		Activities:  toEntries(y.Activities),
+		ReleasesURL: y.ReleasesURL,
+		SiteURL:     y.SiteURL,
 	}
 	for _, s := range y.Skills {
 		r.Skills = append(r.Skills, model.SkillGroup{Category: s.Category, Items: s.Items})

@@ -17,6 +17,13 @@
     </div>
   </div>
 </header>
+<nav class="downloads" aria-label="Download résumé PDFs">
+  <span class="downloads-label">Download PDF:</span>
+  <a class="dl-btn" href="https://github.com/example/example/releases/latest/download/George_Messiha_Resume.pdf">Résumé</a>
+  <a class="dl-btn" href="https://github.com/example/example/releases/latest/download/George_Messiha_detailed_resume.pdf">Detailed</a>
+  <a class="dl-btn dl-alt" href="https://github.com/example/example/releases/latest/download/George_Messiha_Resume_v2.pdf">Résumé (Typst)</a>
+  <a class="dl-btn dl-alt" href="https://github.com/example/example/releases/latest/download/George_Messiha_detailed_resume_v2.pdf">Detailed (Typst)</a>
+</nav>
 
 <section>
   <h2>Professional Summary</h2>

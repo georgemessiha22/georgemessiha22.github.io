@@ -5,6 +5,14 @@
 #   variants: [detailed]           -> detailed resume only
 #   (omitted)                      -> appears in both (untagged = both)
 
+# Base URL for downloadable release assets. When set, the HTML site shows PDF
+# download links after the header.
+releases_url: https://github.com/georgemessiha22/georgemessiha22/releases/latest/download
+
+# Absolute base URL of the published site. Shown as the website link in the PDFs
+# and used for the blog navigation on the HTML site.
+site_url: https://georgemessiha22.github.io
+
 contact:
   firstname: George
   lastname: Messiha

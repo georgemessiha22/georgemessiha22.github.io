@@ -30,6 +30,7 @@ Leadership: Mentoring senior engineers, setting organization-wide best practices
 I'm driven by a passion for learning new technologies and applying them to make a tangible impact. 🔥 On this page, you'll find a collection of my personal projects and experiments related to distributed systems and cloud-native tech.
 
 ## 🌐 Socials:
+[![Website](https://img.shields.io/badge/Website-georgemessiha22.github.io-2f5fa6?style=flat-square&logo=githubpages&logoColor=white)](https://georgemessiha22.github.io)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/georgemessiha22)
 [![Reddit](https://img.shields.io/badge/Reddit-%23FF4500.svg?logo=Reddit&logoColor=white)](https://reddit.com/user/georgemessiha22)
 [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&logoColor=white)](https://twitter.com/georgemessiha22)
