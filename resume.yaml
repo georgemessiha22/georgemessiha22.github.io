@@ -27,33 +27,32 @@ contact:
     linkedin: georgemessiha22
 
 summary: >-
-  SWE with over 9 years of experience specializing in architecting and scaling
-  business-critical, distributed backend systems in Golang. Proven leader in
-  driving complex technical initiatives, from migrating legacy monoliths to
-  resilient microservice ecosystems to defining technical roadmaps that align
-  with strategic business goals. Expert in setting organization-wide best
-  practices for system design, observability, and high-performance computing.
-  Adept at mentoring senior engineers and guiding multiple teams to solve
-  ambiguous, large-scale technical challenges, directly impacting system
-  performance, developer velocity, and platform stability.
+  Lead Software Engineer with 9+ years designing and scaling business-critical,
+  distributed backend systems in Go. Track record of leading teams through
+  high-stakes initiatives — decomposing legacy monoliths into resilient
+  microservices, running zero-downtime data migrations, and hardening systems
+  for resilience and observability. Leads by raising the engineering bar:
+  defining the system-design and testing standards other teams adopt, mentoring
+  senior engineers, and aligning technical roadmaps to business goals to improve
+  system performance, developer velocity, and platform stability.
 
 experience:
   - role: Senior Software Engineer
-    org: HungerStation DeliveryHero Gmbh
+    org: HungerStation (Delivery Hero)
     org_url: https://hungerstation.com
     location: Dubai, UAE
     mode: Hybrid
     start: Nov 2023
     end: Present
     intro: >-
-      Engineered and maintained high-throughput microservices using Golang for a
-      large-scale food delivery platform, focusing on system stability and
-      resilience.
+      Build and operate high-throughput Go microservices for one of the region's
+      largest food-delivery platforms, with a focus on stability, resilience,
+      and cross-team developer experience.
     bullets:
-      - Architected and implemented a new core service in **Go** that streamlined inter-service communication, reducing integration complexities across multiple teams.
-      - Drove significant improvements in the software development lifecycle, achieving a 60% reduction in build times for a key service.
-      - Enhanced system monitoring and tracing capabilities across several distributed systems through collaborative efforts.
-      - Led initiatives to fortify backend systems by implementing comprehensive testing strategies, including functional, integration, chaos, and stress tests.
+      - Architected and implemented a new core service in **Go** that streamlined inter-service communication and reduced integration complexity across multiple teams.
+      - Drove developer-velocity improvements across the delivery lifecycle, **cutting build times for a key service by 60%** through CI pipeline and build-process optimization.
+      - Strengthened observability across distributed services by improving monitoring and distributed tracing, reducing time-to-diagnose for production issues.
+      - Led a testing initiative that hardened backend services with functional, integration, chaos, and stress testing, improving release confidence.
     variants: [summary, detailed]
 
   - role: Lead Software Engineer
@@ -64,14 +63,13 @@ experience:
     start: May 2022
     end: August 2023
     intro: >-
-      Led a team of 4 engineers in the strategic migration of a legacy Python
-      Django monolith to a modern, scalable microservices architecture built
-      with Golang.
+      Led a team of 4 engineers migrating a legacy Python/Django monolith to a
+      scalable Go microservices architecture.
     bullets:
-      - Spearheaded the design and development of new, high-performance microservices in Go, successfully extracting critical business logic and data layers from the monolith.
-      - Engineered a seamless data migration from the Django application to the new Go services, ensuring data integrity and zero downtime.
-      - Improved overall system performance by 50% by re-architecting and rewriting obsolete legacy codebases in Golang.
-      - Mentored team members on Go best practices, microservice patterns, and effective testing strategies.
+      - Spearheaded the design and delivery of high-performance Go microservices, extracting critical business logic and data layers out of the monolith.
+      - Engineered a **zero-downtime** data migration from the Django application to the new Go services, preserving full data integrity.
+      - Re-architected obsolete legacy code in Go, **improving core system performance by ~50%**.
+      - Mentored the team on Go idioms, microservice patterns, and testing strategy, raising overall code quality.
     variants: [summary, detailed]
 
   - role: Senior Software Engineer
@@ -82,13 +80,12 @@ experience:
     start: Mar 2021
     end: August 2022
     intro: >-
-      Developing and Maintain Websites and Infrastructure, Helping other team
-      members to reach the customer requirements, and improve their skills
-      through discussions, monitoring and pair programming. Detailed
-      achievements:
+      Developed and maintained web applications and infrastructure; lifted team
+      delivery quality through pair programming, code review, and technical
+      mentoring.
     bullets:
-      - Mentored junior and mid-level engineers through pair programming, code reviews, and technical discussions, improving team-wide skill and delivery quality.
-      - Authored and evangelized new microservice development patterns and standards, leading to their adoption across the engineering organization and resulting in a 25% reduction in downtime.
+      - Mentored junior and mid-level engineers via pair programming, code reviews, and technical discussions, improving team-wide skill and delivery quality.
+      - Authored and championed microservice development standards that were adopted across the engineering organization, improving service reliability.
     variants: [summary, detailed]
 
   - role: Senior Software Engineer
@@ -99,12 +96,12 @@ experience:
     start: Aug 2021
     end: May 2022
     intro: >-
-      PropTech that faclitaties house mortgages helping you find the best
-      mortgages in town. Developed, Architect the backend.
+      PropTech platform that facilitates home mortgages, helping customers find
+      the best mortgages available. Developed and architected the backend.
     bullets:
-      - Develop and architect the backend infrastucture.
-      - Create migration plans to keep up with the rapid, fast paced market changes and expansions.
-      - Help with the company new hires onboarding policies.
+      - Developed and architected backend infrastructure for a fast-scaling PropTech platform.
+      - Created migration plans to keep pace with rapid market changes and product expansion.
+      - Contributed to the company's new-hire onboarding processes.
     variants: [detailed]
 
   - role: Senior Software Engineer
@@ -115,14 +112,13 @@ experience:
     start: Sep 2018
     end: Mar 2021
     intro: >-
-      Developed data-intensive applications and reporting tools for enterprise
-      clients. Built Orange's first automated reporting tool, decreasing report
-      creation time for clients. This is currently Orange's official tool for
-      generating SLA reports.
+      Built data-intensive applications and reporting tools for enterprise
+      clients, including Orange's first automated SLA reporting tool — now the
+      official tool for generating client SLA reports.
     bullets:
-      - Built the company's first automated SLA reporting tool, significantly decreasing report generation time for clients.
-      - Utilized distributed computing frameworks (Hadoop, Spark) to process terabytes of data, with backend components for data retrieval and API access.
-      - Led a team in gathering and cleaning data for clients, identifying ways to improve system efficiency.
+      - Built the company's first automated SLA reporting tool, significantly reducing report-generation time for clients.
+      - Engineered backend services to retrieve, process, and expose **terabyte-scale** data via APIs, using distributed processing frameworks (Hadoop, Spark).
+      - Led a team in data collection and cleaning for clients and identified system-efficiency improvements.
       - Led technical interviews and mentored junior engineers, contributing to the growth of the engineering team.
     variants: [summary, detailed]
 
@@ -134,23 +130,22 @@ experience:
     start: Jul 2017
     end: Jul 2018
     intro: >-
-      PayMob is Egypt's largest mobile wallets infrastructure. contributed to
-      the development of the Vodafone Cash Backend, utilizing cloud-based
-      solutions.
+      PayMob is Egypt's largest mobile-wallet infrastructure. Contributed to the
+      Vodafone Cash backend, using cloud-based solutions.
     bullets:
-      - develping cloud-based solutions, ensuring optimal performance and scalability, resulting increase in transaction processing speed.
-      - Incerease the overall software quality by applying testing plans and gate, results increase of 25% of overall quality.
+      - Developed cloud-based backend components for a high-volume mobile-wallet system, improving transaction-processing performance.
+      - Raised software quality by introducing testing plans and quality gates into the delivery process.
     variants: [summary, detailed]
 
-  - role: Remote Software Engineer
+  - role: Freelance Software Engineer
     org: Nexus Edge
     location: Sao Paulo, Brazil
-    mode: Remote Part-time
+    mode: Freelance
     start: Dec 2017
+    end: Dec 2017
     intro: >-
-      Developing one of the most cognitive Marketing AI, helping to improve the
-      teams communication, managing the development remotely. Maintaining
-      development cycle.
+      Short (1-month) freelance engagement contributing to a marketing-AI
+      product and supporting remote development coordination.
     variants: [detailed]
 
   - role: Software Engineer
@@ -164,9 +159,9 @@ experience:
       Designed, developed, and maintained MS-Office extensions using MS .NET
       technologies.
     bullets:
-      - Developed and executed comprehensive unit tests, resulting in a 20% reduction in defects identified during Quality Control testing.
-      - Prepared and installed solutions based on well-defined system specifications and standards, ensuring seamless integration with Microsoft Word.
-      - Applied software development concepts such as Software-as-a-Service and Cloud Computing, resulting in a 30% increase in software efficiency and scalability
+      - Developed comprehensive unit tests that measurably reduced defects found during Quality Control testing.
+      - Built and installed solutions to well-defined system specifications and standards, ensuring seamless integration with Microsoft Word.
+      - Applied SaaS and cloud-computing patterns to improve software efficiency and scalability.
     variants: [summary, detailed]
 
   - role: Software Engineer
@@ -176,15 +171,13 @@ experience:
     start: Jun 2016
     end: Jan 2017
     intro: >-
-      Building a cutting-edge tool to automate advertising campaigns on major
-      social media platforms including Facebook, Google, Instagram, and YouTube.
-      This innovative tool streamlines campaign management by automatically
-      monitoring campaign progress, generating peak performance notifications,
-      and selecting optimal strategies within budget constraints to achieve
-      predefined targets. The tool leverages machine learning, AI, RESTful APIs,
-      and various applications to optimize campaign outcomes.
+      Built a tool to automate advertising campaigns across major social
+      platforms (Facebook, Google, Instagram, YouTube). It monitored campaign
+      progress, generated performance alerts, and selected budget-optimal
+      strategies to hit target metrics, using RESTful APIs and machine-learning
+      techniques.
     bullets:
-      - Developed, thoroughly tested, debugged, and maintained the automated campaign management tool.
+      - Developed, tested, debugged, and maintained the automated campaign-management tool.
     variants: [summary, detailed]
 
   - role: Junior Teaching Assistant
@@ -193,9 +186,8 @@ experience:
     start: Sep 2015
     end: Jan 2016
     intro: >-
-      Helping the Teacher Assistant in the University in teaching Android
-      Application developing. Helping students to do their tasks on time, solving
-      any issues facing them or teach them any required skills.
+      Assisted in teaching Android application development, helping students
+      complete tasks on time, resolve issues, and build the skills they needed.
     variants: [detailed]
 
   - role: Network Engineer Trainee
@@ -203,11 +195,11 @@ experience:
     url: https://github.com/georgemessiha22/resume/blob/master/Experience/internships/orange/Mobinil_Training_Certificate.PDF
     location: Cairo, EG
     start: Jul 2014
-    intro: "Did system provisioning work. Main Duties:"
+    intro: "Performed system provisioning work. Main duties:"
     bullets:
-      - Security Analyzer.
-      - Connect remotely to Offices' devices for troubleshooting.
-      - Revise Offices' Firewalls policy.
+      - Ran security analysis on network devices.
+      - Connected remotely to office devices for troubleshooting.
+      - Reviewed office firewall policies.
     variants: [detailed]
 
   - role: Sales & Representative Engineer Trainee
@@ -215,11 +207,11 @@ experience:
     url: https://github.com/georgemessiha22/resume/blob/master/Experience/internships/xerox/Xerox_Training/Certificate.PDF
     location: Cairo, EG
     start: Aug 2014
-    intro: "Did system administrative work. Main Duties:"
+    intro: "Performed system administration work. Main duties:"
     bullets:
-      - Establish Network connection to Xerox remote Devices.
-      - Maintain IT requirements for the devices to adapt for the network condition.
-      - Build Xerox printer's Applications specially customized for the clients.
+      - Established network connectivity to remote Xerox devices.
+      - Maintained IT requirements so devices adapted to network conditions.
+      - Built customized Xerox printer applications for clients.
     variants: [detailed]
 
 education:
@@ -239,26 +231,25 @@ education:
     end: "2011"
 
 skills:
-  - category: Language
-    items: [Go, Python, Shell]
-  - category: Web-Frameworks
-    items: [Fiber, Gin, Go-Kit, Django, FastAPI, Flask, gRPC]
-  - category: SysAdmin
+  - category: Languages
+    items: [Go, Python, Bash, Fish, Ruby, Zig]
+  - category: Backend & APIs
+    items: [gRPC, Go-Kit, Django, Ruby on Rails]
+  - category: Distributed Systems & Infra
+    items: [Kubernetes (k8s), Docker, Docker-Compose, Traefik, Istio]
+  - category: Observability
+    items: [OpenTelemetry, Prometheus, PGAnalyze, Grafana, DataDog]
+  - category: CI/CD & DevOps
+    items: [Gitlab CI/CD, Github Actions, Jenkins, Continuous Delivery]
+  - category: OS & Tooling
     items:
       - Linux (Debian, Arch)
-      - Gitlab CI/CD
-      - Docker
-      - Docker-Compose
-      - Continues Delivery
-      - Github Actions
-      - Jenkins
-      - OpenTelemetry
-  - category: Data Science
-    items: [Pandas, NumPy]
-  - category: Services
-    items: [HAProxy, Kubernetes (k8s), Prometheus, Grafana, DataDog, Istio, Traefik]
-  - category: Team Tools
-    items: [Agile, Scrum, XP, Jira, git, Swagger]
+      - Git
+      - OpenAPI (Swagger)
+  - category: Ways of Working
+    items: [Agile, Scrum, XP, Jira]
+  - category: Additional
+    items: [Agentic development, AI Workflow, Pandas, NumPy]
 
 languages:
   - name: Arabic
@@ -323,217 +314,6 @@ certificates:
     cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/android/Android_certificate.pdf
     location: Cairo, EG
     start: "2016"
-    variants: [detailed]
-
-  # DataCamp — Courses (detailed only)
-  - title: Introduction to Databases in Python
-    org: DataCamp
-    org_url: https://www.datacamp.com/
-    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/Introduction to Databases in Python.pdf
-    location: Cairo, EG
-    start: "2017"
-    end: "2018"
-    group: Courses
-    variants: [detailed]
-
-  - title: pandas Foundations
-    org: DataCamp
-    org_url: https://www.datacamp.com/
-    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/pandas Foundations.pdf
-    location: Cairo, EG
-    start: "2017"
-    end: "2018"
-    group: Courses
-    variants: [detailed]
-
-  - title: Importing Data in Python (Part 1)
-    org: DataCamp
-    org_url: https://www.datacamp.com/
-    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/Importing Data in Python (Part 1).pdf
-    location: Cairo, EG
-    start: "2017"
-    end: "2018"
-    group: Courses
-    variants: [detailed]
-
-  - title: Importing Data in Python (Part 2)
-    org: DataCamp
-    org_url: https://www.datacamp.com/
-    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/Importing Data in Python (Part 2).pdf
-    location: Cairo, EG
-    start: "2017"
-    end: "2018"
-    group: Courses
-    variants: [detailed]
-
-  - title: Cleaning Data in Python
-    org: DataCamp
-    org_url: https://www.datacamp.com/
-    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/Cleaning Data in Python.pdf
-    location: Cairo, EG
-    start: "2017"
-    end: "2018"
-    group: Courses
-    variants: [detailed]
-
-  - title: Introduction to Data Visualization with Python
-    org: DataCamp
-    org_url: https://www.datacamp.com/
-    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/Introduction to Data Visualization with Python.pdf
-    location: Cairo, EG
-    start: "2017"
-    end: "2018"
-    group: Courses
-    variants: [detailed]
-
-  - title: Interactive Data Visualization with Bokeh
-    org: DataCamp
-    org_url: https://www.datacamp.com/
-    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/Interactive Data Visualization with Bokeh.pdf
-    location: Cairo, EG
-    start: "2017"
-    end: "2018"
-    group: Courses
-    variants: [detailed]
-
-  - title: Intro to Python for Data Science Course
-    org: DataCamp
-    org_url: https://www.datacamp.com/
-    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/Intro to Python for Data Science Course.pdf
-    location: Cairo, EG
-    start: "2017"
-    end: "2018"
-    group: Courses
-    variants: [detailed]
-
-  - title: Statistical Thinking in Python (Part 1)
-    org: DataCamp
-    org_url: https://www.datacamp.com/
-    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/Statistical Thinking in Python (Part 1).pdf
-    location: Cairo, EG
-    start: "2017"
-    end: "2018"
-    group: Courses
-    variants: [detailed]
-
-  - title: Statistical Thinking in Python (Part 2)
-    org: DataCamp
-    org_url: https://www.datacamp.com/
-    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/Statistical Thinking in Python (Part 2).pdf
-    location: Cairo, EG
-    start: "2017"
-    end: "2018"
-    group: Courses
-    variants: [detailed]
-
-  - title: Python Data Science Toolbox (Part 1)
-    org: DataCamp
-    org_url: https://www.datacamp.com/
-    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/Python Data Science Toolbox (Part 1).pdf
-    location: Cairo, EG
-    start: "2017"
-    end: "2018"
-    group: Courses
-    variants: [detailed]
-
-  - title: Python Data Science Toolbox (Part 2)
-    org: DataCamp
-    org_url: https://www.datacamp.com/
-    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/Python Data Science Toolbox (Part 2).pdf
-    location: Cairo, EG
-    start: "2017"
-    end: "2018"
-    group: Courses
-    variants: [detailed]
-
-  - title: Intro to SQL for Data Science
-    org: DataCamp
-    org_url: https://www.datacamp.com/
-    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/Intro to SQL for Data Science.pdf
-    location: Cairo, EG
-    start: "2017"
-    end: "2018"
-    group: Courses
-    variants: [detailed]
-
-  - title: Intermediate Python for Data Science Course
-    org: DataCamp
-    org_url: https://www.datacamp.com/
-    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/Intermediate Python for Data Science Course.pdf
-    location: Cairo, EG
-    start: "2017"
-    end: "2018"
-    group: Courses
-    variants: [detailed]
-
-  - title: Manipulating DataFrames with pandas
-    org: DataCamp
-    org_url: https://www.datacamp.com/
-    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/Manipulating DataFrames with pandas.pdf
-    location: Cairo, EG
-    start: "2017"
-    end: "2018"
-    group: Courses
-    variants: [detailed]
-
-  - title: Merging DataFrames with pandas
-    org: DataCamp
-    org_url: https://www.datacamp.com/
-    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/Merging DataFrames with pandas.pdf
-    location: Cairo, EG
-    start: "2017"
-    end: "2018"
-    group: Courses
-    variants: [detailed]
-
-  - title: Network Analysis in Python (Part 1)
-    org: DataCamp
-    org_url: https://www.datacamp.com/
-    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/Network Analysis in Python (Part 1).pdf
-    location: Cairo, EG
-    start: "2017"
-    end: "2018"
-    group: Courses
-    variants: [detailed]
-
-  - title: Machine Learning with the Experts_ School Budgets
-    org: DataCamp
-    org_url: https://www.datacamp.com/
-    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/Machine Learning with the Experts_ School Budgets.pdf
-    location: Cairo, EG
-    start: "2017"
-    end: "2018"
-    group: Courses
-    variants: [detailed]
-
-  - title: Supervised Learning with scikit-learn Course
-    org: DataCamp
-    org_url: https://www.datacamp.com/
-    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/Supervised Learning with scikit-learn Course.pdf
-    location: Cairo, EG
-    start: "2017"
-    end: "2018"
-    group: Courses
-    variants: [detailed]
-
-  - title: Unsupervised Learning in Python Course
-    org: DataCamp
-    org_url: https://www.datacamp.com/
-    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/Unsupervised Learning in Python Course.pdf
-    location: Cairo, EG
-    start: "2017"
-    end: "2018"
-    group: Courses
-    variants: [detailed]
-
-  - title: Deep Learning in Python
-    org: DataCamp
-    org_url: https://www.datacamp.com/
-    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/courses/Deep Learning in Python.pdf
-    location: Cairo, EG
-    start: "2017"
-    end: "2018"
-    group: Courses
     variants: [detailed]
 
   # DataCamp — Tracks (detailed only)
@@ -614,19 +394,18 @@ activities:
     start: May 2016
     end: "2017"
     intro: >-
-      Organizing weekly meetings for kids in Masr Gedida. Prepare workshops of
-      games and help them with school. on other hand teach them to spell and
-      wirte.
+      Organized weekly meetings for children in Masr Gedida, ran game-based
+      workshops, helped with schoolwork, and taught spelling and writing.
     variants: [detailed]
 
   - role: Voluntary Education
     org: Math Teacher
     location: Cairo, EG
-    start: Sept
+    start: Sep 2015
     end: Dec 2015
     intro: >-
-      Providing Education for kids from rural areas. Teaching Math for fifth
-      primary students. Teaching English for second primary students.
+      Provided education for children from rural areas — teaching Math to fifth-
+      grade students and English to second-grade students.
     variants: [detailed]
 
   - role: Culture Awareness Charitable NGO
@@ -635,9 +414,9 @@ activities:
     start: "2013"
     end: "2015"
     intro: >-
-      Organizing camps for kids from rural areas. Prepare workshops that teach
-      them some crafts. Give presentations about: culture awareness, selfSteem,
-      goals and human development.
+      Organized camps for children from rural areas, ran craft workshops, and
+      gave presentations on culture awareness, self-esteem, goal-setting, and
+      personal development.
     variants: [detailed]
 
   - role: Educational Charitable NGO
@@ -646,7 +425,6 @@ activities:
     start: Jan 2012
     end: May 2012
     intro: >-
-      Organizing camps for High School Students. Role: Presenter. To Educate the
-      High School Students more about life experiences and prepare them to face
-      the future.
+      Organized camps for high-school students as a presenter, sharing life
+      experiences and helping prepare them for the future.
     variants: [detailed]
