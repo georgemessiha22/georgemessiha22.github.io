@@ -34,6 +34,7 @@ type yamlResume struct {
 	Certificates []yamlCert  `yaml:"certificates"`
 	Activities   []yamlEntry `yaml:"activities"`
 	ReleasesURL  string      `yaml:"releases_url"`
+	SiteURL      string      `yaml:"site_url"`
 }
 
 type yamlEntry struct {
@@ -132,6 +133,7 @@ func Load(path string) (model.Resume, error) {
 		Education:   toEntries(y.Education),
 		Activities:  toEntries(y.Activities),
 		ReleasesURL: y.ReleasesURL,
+		SiteURL:     y.SiteURL,
 	}
 	for _, s := range y.Skills {
 		r.Skills = append(r.Skills, model.SkillGroup{Category: s.Category, Items: s.Items})

@@ -82,6 +82,10 @@ type Resume struct {
 	// "https://github.com/owner/repo/releases/latest/download". When set, the
 	// HTML site shows PDF download links. Optional.
 	ReleasesURL string
+	// SiteURL is the absolute base URL of the published site (e.g.
+	// "https://georgemessiha22.github.io"). Used as the website link in the
+	// PDFs and for absolute links on the HTML site. Optional.
+	SiteURL string
 }
 
 func includesVariant(vs []Variant, v Variant) bool {

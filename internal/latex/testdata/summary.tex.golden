@@ -19,6 +19,7 @@
 \address{Dubai, UAE}{}
 \mobile{(+971) 54 555 1032}
 \email{g@example.com}
+\homepage{example.github.io}
 \social[linkedin]{georgemessiha22}
 \social[github]{georgemessiha22}
 \begin{document}

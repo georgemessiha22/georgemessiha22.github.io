@@ -46,11 +46,20 @@ func emphasize(s string) string {
 	return b.String()
 }
 
+// stripScheme removes a leading http(s):// and any trailing slash so a URL
+// displays compactly (e.g. "https://example.com/" -> "example.com").
+func stripScheme(s string) string {
+	s = strings.TrimPrefix(s, "https://")
+	s = strings.TrimPrefix(s, "http://")
+	return strings.TrimRight(s, "/")
+}
+
 func (Renderer) Render(r model.Resume, v model.Variant) ([]render.Artifact, error) {
 	rr := r.ForVariant(v)
 	t, err := template.New("resume.tex.tmpl").Funcs(template.FuncMap{
-		"esc":  escape,
-		"emph": emphasize,
+		"esc":         escape,
+		"emph":        emphasize,
+		"stripscheme": stripScheme,
 	}).ParseFS(tmplFS, "templates/resume.tex.tmpl")
 	if err != nil {
 		return nil, err

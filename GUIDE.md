@@ -36,11 +36,52 @@ into each format via independent engine packages (`internal/typst`,
    `https://github.com/<you>/<repo>/releases/latest/download` — the HTML site
    shows PDF download buttons pointing at your latest release. Omit it to hide
    the buttons.
-6. **Generate locally** (see Usage). Commit and push to `master`; the release
+6. **Set `site_url`** (top-level) to your published site, e.g.
+   `https://<you>.github.io`. It appears as your website link in the PDFs.
+7. **Add blog posts** (optional): create `blog/<slug>/index.md` with optional
+   front-matter and images alongside it (see "Blogging" below). A `Blog` tab
+   appears on the site automatically when at least one post exists.
+8. **Generate locally** (see Usage). Commit and push to `master`; the release
    workflow builds the PDFs, attaches them to a GitHub Release, and deploys the
    site to Pages.
-7. **Enable GitHub Pages**: repo Settings → Pages → Source = "GitHub Actions"
+9. **Enable GitHub Pages**: repo Settings → Pages → Source = "GitHub Actions"
    (one-time step, required for the deploy job to publish the site).
+
+## Blogging
+
+The HTML site is a small blog. The résumé is the home page (`index.html`) and a
+`Blog` tab lists your posts.
+
+Add a post by creating a folder under `blog/` with an `index.md`:
+
+```
+blog/
+  my-first-post/
+    index.md
+    diagram.png      # images (or any assets) referenced relatively
+```
+
+`index.md` supports optional YAML front-matter and standard Markdown (GFM),
+including images:
+
+```markdown
+---
+title: My First Post
+date: "2026-06-30"
+summary: A one-line description shown on the blog index.
+---
+
+# My First Post
+
+![A diagram](diagram.png)
+
+Regular **Markdown** — lists, code blocks, quotes, links — all work.
+```
+
+Posts are sorted newest-first by `date`. If you omit front-matter, the folder
+name is used as the title. Regenerate with `make site` (or `go run ./cmd/resume
+html`); each post becomes `blog/<slug>/index.html` with its images copied
+alongside.
 
 ## Usage
 
@@ -78,9 +119,11 @@ go test ./...
 
 ## Project layout
 - `resume.yaml` — your content (the only file you normally edit)
+- `blog/<slug>/index.md` — blog posts (+ their images)
 - `cmd/resume/` — CLI entrypoint
 - `internal/model`, `internal/config` — data model + YAML loading
 - `internal/render` — `Renderer` interface + shared helpers
+- `internal/blog` — loads and renders Markdown blog posts
 - `internal/typst`, `internal/latex`, `internal/markdown`, `internal/html` — output engines
 - `typst/fonts/` — fonts vendored for reproducible Typst builds
 - `moderncv/` — git submodule used by the LaTeX build

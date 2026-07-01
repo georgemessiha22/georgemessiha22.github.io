@@ -6,6 +6,7 @@
     lastname: "Messiha",
     email: "g@example.com",
     phone: "(+971) 54 555 1032",
+    homepage: "https://example.github.io",
     github: "georgemessiha22",
     linkedin: "georgemessiha22",
     address: "Dubai, UAE",

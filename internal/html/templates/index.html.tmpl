@@ -7,6 +7,12 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+{{- if .HasBlog }}
+<nav class="site-nav">
+  <a class="active" href="index.html">Résumé</a>
+  <a href="blog/index.html">Blog</a>
+</nav>
+{{- end }}
 <header class="top">
 {{- if .HasPhoto }}
   <img src="profile.jpg" alt="{{ .Contact.Firstname }} {{ .Contact.Lastname }}">

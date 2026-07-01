@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ .Post.Title }} — {{ .Resume.Contact.Firstname }} {{ .Resume.Contact.Lastname }}</title>
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<nav class="site-nav">
+  <a href="../../index.html">Résumé</a>
+  <a href="../index.html">Blog</a>
+</nav>
+<article class="post">
+  <h1 class="post-title">{{ .Post.Title }}</h1>
+  {{- if .Post.Date }}<div class="post-date">{{ .Post.Date }}</div>{{ end }}
+  <div class="post-body">
+    {{ safeHTML .Post.HTML }}
+  </div>
+  <p class="post-back"><a href="../index.html">← Back to blog</a></p>
+</article>
+</body>
+</html>

@@ -19,6 +19,9 @@
 \address{ {{- esc .Contact.Location -}} }{}
 \mobile{ {{- esc .Contact.Phone -}} }
 \email{ {{- esc .Contact.Email -}} }
+{{- if .SiteURL }}
+\homepage{ {{- esc (stripscheme .SiteURL) -}} }
+{{- end }}
 {{- if .Contact.Socials.LinkedIn }}
 \social[linkedin]{ {{- esc .Contact.Socials.LinkedIn -}} }
 {{- end }}
