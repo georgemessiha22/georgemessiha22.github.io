@@ -1,5 +1,5 @@
 # Lead Software Engineer | Gopher, Pythonista
-[![Release](https://github.com/georgemessiha22/georgemessiha22/actions/workflows/release.yml/badge.svg?branch=master&event=release)](https://github.com/georgemessiha22/georgemessiha22/actions/workflows/release.yml)
+[![Release](https://github.com/georgemessiha22/georgemessiha22/actions/workflows/release.yml/badge.svg?branch=master)](https://github.com/georgemessiha22/georgemessiha22/actions/workflows/release.yml)
 
 ## 💫 About Me:
 

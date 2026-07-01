@@ -1,15 +1,18 @@
 \documentclass[10pt,a4paper,sans]{moderncv}
-\usepackage{fontawesome5}
-\usepackage[T1]{fontenc}
-\usepackage{multicol}
+% Compile with LuaLaTeX (fontspec). moderncv loads fontenc/inputenc handling and
+% its FontAwesome social icons itself, so we only set fonts + style/color here.
+\moderncvstyle{banking}
+\moderncvcolor{grey}
 \usepackage[scale=0.8,top=1.9cm, bottom=1.9cm]{geometry}
-\usepackage[utf8]{inputenc}
-\usepackage{lmodern}
+\usepackage{fontspec}
+\setsansfont{TeX Gyre Heros}
+\setmainfont{TeX Gyre Heros}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{multicol}
 \usepackage[unicode]{hyperref}
 \definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
 \hypersetup{colorlinks=true, linkcolor=airforceblue, urlcolor=airforceblue}
 \nopagenumbers{}
-\moderncvtheme[grey]{banking}
 \firstname{George}
 \familyname{Messiha}
 \title{Lead SWE}

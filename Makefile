@@ -17,15 +17,15 @@ gen:
 	mkdir -p $(GEN)/assets
 	cp pictures/61673.jpg $(GEN)/assets/profile.jpg
 
-# LaTeX PDFs (compiled in Docker) from generated .tex.
+# LaTeX PDFs (compiled with LuaLaTeX in Docker) from generated .tex.
 resume: gen
 	mkdir -p dist
-	docker run --rm -v $(PWD):/data tex:latest pdflatex -output-directory dist $(GEN)/resume.tex
+	docker run --rm -v $(PWD):/data tex:latest lualatex -interaction=nonstopmode -output-directory dist $(GEN)/resume.tex
 	mv dist/resume.pdf dist/George_Messiha_Resume.pdf
 
 detailed: gen
 	mkdir -p dist
-	docker run --rm -v $(PWD):/data tex:latest pdflatex -output-directory dist $(GEN)/resume_detailed.tex
+	docker run --rm -v $(PWD):/data tex:latest lualatex -interaction=nonstopmode -output-directory dist $(GEN)/resume_detailed.tex
 	mv dist/resume_detailed.pdf dist/George_Messiha_detailed_resume.pdf
 
 # Typst PDFs from generated .typ.
