@@ -30,7 +30,7 @@ Commands:
 
 Flags:
   --input   path to YAML (default resume.yaml)
-  --variant summary|detailed (default summary; html forces detailed)
+  --variant summary|detailed (default summary; html always uses summary)
   --out     output directory (default build/gen; site default site)
   --blog    blog posts directory (default blog) for the html site
 `)
@@ -72,7 +72,7 @@ func run(cmd, input, variant, out, blogDir string) error {
 	case "md":
 		return generate(markdown.Renderer{}, r, parseVariant(variant), pick(out, defGen))
 	case "html":
-		return generate(html.Renderer{BlogDir: blogDir}, r, model.Detailed, pick(out, defSite))
+		return generate(html.Renderer{BlogDir: blogDir}, r, model.Summary, pick(out, defSite))
 	case "all":
 		if err := generate(typst.Renderer{}, r, model.Summary, defGen); err != nil {
 			return err
@@ -92,7 +92,7 @@ func run(cmd, input, variant, out, blogDir string) error {
 		if err := generate(markdown.Renderer{}, r, model.Detailed, defGen); err != nil {
 			return err
 		}
-		return generate(html.Renderer{BlogDir: blogDir}, r, model.Detailed, defSite)
+		return generate(html.Renderer{BlogDir: blogDir}, r, model.Summary, defSite)
 	default:
 		usage()
 		return fmt.Errorf("unknown command %q", cmd)

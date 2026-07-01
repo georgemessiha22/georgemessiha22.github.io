@@ -97,7 +97,7 @@ alongside.
 go run ./cmd/resume all                      # typst + tex + md (both variants) + html site
 go run ./cmd/resume typst --variant detailed # one format, one variant
 go run ./cmd/resume md                        # resume.md (summary)
-go run ./cmd/resume html                     # site/ (detailed)
+go run ./cmd/resume html                     # site/ (summary)
 ```
 Flags: `--input` (default `resume.yaml`), `--variant` (`summary`|`detailed`),
 `--out` (default `build/gen`; the site goes to `site/`).

@@ -45,7 +45,7 @@ md: gen
 	cp $(GEN)/resume.md dist/George_Messiha_Resume.md
 	cp $(GEN)/resume_detailed.md dist/George_Messiha_detailed_resume.md
 
-# HTML mini-site (detailed) for GitHub Pages.
+# HTML mini-site (summary variant) for GitHub Pages.
 site: gen
 
 clean:
