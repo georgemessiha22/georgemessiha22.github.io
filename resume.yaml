@@ -7,7 +7,7 @@
 
 # Base URL for downloadable release assets. When set, the HTML site shows PDF
 # download links after the header.
-releases_url: https://github.com/georgemessiha22/georgemessiha22/releases/latest/download
+releases_url: https://github.com/georgemessiha22/georgemessiha22.github.io/releases/latest/download
 
 # Absolute base URL of the published site. Shown as the website link in the PDFs
 # and used for the blog navigation on the HTML site.
@@ -192,7 +192,7 @@ experience:
 
   - role: Network Engineer Trainee
     org: Orange Egypt
-    url: https://github.com/georgemessiha22/resume/blob/master/Experience/internships/orange/Mobinil_Training_Certificate.PDF
+    url: https://github.com/georgemessiha22/georgemessiha22.github.io/blob/master/Experience/internships/orange/Mobinil_Training_Certificate.PDF
     location: Cairo, EG
     start: Jul 2014
     intro: "Performed system provisioning work. Main duties:"
@@ -204,7 +204,7 @@ experience:
 
   - role: Sales & Representative Engineer Trainee
     org: Xerox
-    url: https://github.com/georgemessiha22/resume/blob/master/Experience/internships/xerox/Xerox_Training/Certificate.PDF
+    url: https://github.com/georgemessiha22/georgemessiha22.github.io/blob/master/Experience/internships/xerox/Xerox_Training/Certificate.PDF
     location: Cairo, EG
     start: Aug 2014
     intro: "Performed system administration work. Main duties:"
@@ -217,7 +217,7 @@ experience:
 education:
   - role: Bachelor of Networks and Information Engineering Technology
     org: German University in Cairo
-    url: https://github.com/georgemessiha22/resume/blob/master/Education/bachelor/bcs_network_engineer_guc.jpg
+    url: https://github.com/georgemessiha22/georgemessiha22.github.io/blob/master/Education/bachelor/bcs_network_engineer_guc.jpg
     location: Cairo, EG
     start: "2011"
     end: "2016"
@@ -225,7 +225,7 @@ education:
 
   - role: Thanwya Amma, Math Science
     org: Saint Fatima International School - Nasr City
-    url: https://github.com/georgemessiha22/resume/blob/master/Education/school/Thanwya_Amma_Certificate.PDF
+    url: https://github.com/georgemessiha22/georgemessiha22.github.io/blob/master/Education/school/Thanwya_Amma_Certificate.PDF
     location: Cairo, EG
     start: "1997"
     end: "2011"
@@ -262,7 +262,7 @@ certificates:
   - title: Foundation of Project Management
     org: Google
     org_url: https://www.coursera.org/professional-certificates/google-project-management
-    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/project_management/foundations_of_project_management.pdf
+    cert_url: https://github.com/georgemessiha22/georgemessiha22.github.io/blob/master/certificates_awards/project_management/foundations_of_project_management.pdf
     location: Dubai, UAE
     start: "2024"
     end: "2024"
@@ -271,7 +271,7 @@ certificates:
   - title: Design Thinking for Microservices
     org: SkillSoft
     org_url: https://skillsoft.digitalbadges-eu.skillsoft.com/baffdb7e-a4ce-4b3c-aba0-4e15d4c2543e
-    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/skillsoft/design_thinking_for_microservices/3tw0pe4g_badge.png
+    cert_url: https://github.com/georgemessiha22/georgemessiha22.github.io/blob/master/certificates_awards/skillsoft/design_thinking_for_microservices/3tw0pe4g_badge.png
     location: Cairo, EG
     start: "2020"
     variants: [summary, detailed]
@@ -279,7 +279,7 @@ certificates:
   - title: "PeopleCert DevOps Fundamentals: Effectiveness & efficiency beyond comparison"
     org: PeopleCert
     org_url: https://candidate.peoplecert.org/
-    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/peopleCert/e-Cert.pdf
+    cert_url: https://github.com/georgemessiha22/georgemessiha22.github.io/blob/master/certificates_awards/peopleCert/e-Cert.pdf
     location: Cairo, EG
     start: "2019"
     variants: [summary, detailed]
@@ -287,14 +287,14 @@ certificates:
   - title: Deep Learning NanoDegree
     org: Udacity, ITI
     org_url: https://graduation.udacity.com/confirm/AYS9JCEY
-    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/deep_learning/udacity_deep_learning.pdf
+    cert_url: https://github.com/georgemessiha22/georgemessiha22.github.io/blob/master/certificates_awards/deep_learning/udacity_deep_learning.pdf
     location: Cairo, EG
     start: "2018"
     variants: [summary, detailed]
 
   - title: Data Analyst
     org: Udacity, 1 Million Arab Coder
-    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_analyst/data_analyst.pdf
+    cert_url: https://github.com/georgemessiha22/georgemessiha22.github.io/blob/master/certificates_awards/data_analyst/data_analyst.pdf
     location: Cairo, EG
     start: "2018"
     variants: [summary, detailed]
@@ -302,7 +302,7 @@ certificates:
   - title: Data Scientist
     org: DataCamp
     org_url: https://www.datacamp.com/
-    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/Tracks/Data Scientist.pdf
+    cert_url: https://github.com/georgemessiha22/georgemessiha22.github.io/blob/master/certificates_awards/data_camp/Tracks/Data Scientist.pdf
     location: Cairo, EG
     start: "2017"
     end: "2018"
@@ -311,7 +311,7 @@ certificates:
   # ---- Detailed only ----
   - title: Android Fundamentals
     org: Udacity, ITI
-    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/android/Android_certificate.pdf
+    cert_url: https://github.com/georgemessiha22/georgemessiha22.github.io/blob/master/certificates_awards/android/Android_certificate.pdf
     location: Cairo, EG
     start: "2016"
     variants: [detailed]
@@ -320,7 +320,7 @@ certificates:
   - title: Python Programming
     org: DataCamp
     org_url: https://www.datacamp.com/
-    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/Tracks/Python Programming.pdf
+    cert_url: https://github.com/georgemessiha22/georgemessiha22.github.io/blob/master/certificates_awards/data_camp/Tracks/Python Programming.pdf
     location: Cairo, EG
     start: "2017"
     end: "2018"
@@ -330,7 +330,7 @@ certificates:
   - title: Python Programmer
     org: DataCamp
     org_url: https://www.datacamp.com/
-    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/Tracks/Python Programmer.pdf
+    cert_url: https://github.com/georgemessiha22/georgemessiha22.github.io/blob/master/certificates_awards/data_camp/Tracks/Python Programmer.pdf
     location: Cairo, EG
     start: "2017"
     end: "2018"
@@ -340,7 +340,7 @@ certificates:
   - title: Importing Cleaning Data with Python
     org: DataCamp
     org_url: https://www.datacamp.com/
-    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/Tracks/Importing _ Cleaning Data with Python .pdf
+    cert_url: https://github.com/georgemessiha22/georgemessiha22.github.io/blob/master/certificates_awards/data_camp/Tracks/Importing _ Cleaning Data with Python .pdf
     location: Cairo, EG
     start: "2017"
     end: "2018"
@@ -350,7 +350,7 @@ certificates:
   - title: Data Manipulation with Python
     org: DataCamp
     org_url: https://www.datacamp.com/
-    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/Tracks/Data Manipulation with Python.pdf
+    cert_url: https://github.com/georgemessiha22/georgemessiha22.github.io/blob/master/certificates_awards/data_camp/Tracks/Data Manipulation with Python.pdf
     location: Cairo, EG
     start: "2017"
     end: "2018"
@@ -360,7 +360,7 @@ certificates:
   - title: Data Analyst with Python
     org: DataCamp
     org_url: https://www.datacamp.com/
-    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/Tracks/Data Analyst with Python.pdf
+    cert_url: https://github.com/georgemessiha22/georgemessiha22.github.io/blob/master/certificates_awards/data_camp/Tracks/Data Analyst with Python.pdf
     location: Cairo, EG
     start: "2017"
     end: "2018"
@@ -370,7 +370,7 @@ certificates:
   - title: Machine Learning with Python Track
     org: DataCamp
     org_url: https://www.datacamp.com/
-    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/Tracks/Machine Learning with Python Track.pdf
+    cert_url: https://github.com/georgemessiha22/georgemessiha22.github.io/blob/master/certificates_awards/data_camp/Tracks/Machine Learning with Python Track.pdf
     location: Cairo, EG
     start: "2017"
     end: "2018"
@@ -380,7 +380,7 @@ certificates:
   - title: Data Science
     org: DataCamp
     org_url: https://www.datacamp.com/
-    cert_url: https://github.com/georgemessiha22/resume/blob/master/certificates_awards/data_camp/Tracks/Data Scientist .pdf
+    cert_url: https://github.com/georgemessiha22/georgemessiha22.github.io/blob/master/certificates_awards/data_camp/Tracks/Data Scientist .pdf
     location: Cairo, EG
     start: "2017"
     end: "2018"
