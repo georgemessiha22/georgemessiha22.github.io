@@ -1,0 +1,52 @@
+# {{ .Contact.Firstname }} {{ .Contact.Lastname }}
+{{ if .Contact.Title }}
+**{{ md .Contact.Title }}**
+{{ end }}
+{{ contactline . }}
+
+## Professional Summary
+
+{{ emph .Summary }}
+
+## Experience
+{{ range .Experience }}
+### {{ if .URL }}[{{ md .Role }}]({{ urlenc .URL }}){{ else }}{{ md .Role }}{{ end }}
+
+{{ if .OrgURL }}[{{ md .Org }}]({{ urlenc .OrgURL }}){{ else }}{{ md .Org }}{{ end }}{{ if .Mode }} · {{ md .Mode }}{{ end }} — {{ md .Location }} · {{ md .Start }}{{ if .End }} – {{ md .End }}{{ end }}
+{{ if .Intro }}
+{{ emph .Intro }}
+{{ end }}{{ range .Bullets }}
+- {{ emph . }}
+{{- end }}
+{{ end }}
+## Education
+{{ range .Education }}
+### {{ if .URL }}[{{ md .Role }}]({{ urlenc .URL }}){{ else }}{{ md .Role }}{{ end }}
+
+{{ md .Org }} — {{ md .Location }} · {{ md .Start }}{{ if .End }} – {{ md .End }}{{ end }}
+{{ if .Note }}
+_{{ emph .Note }}_
+{{ end }}{{ end }}
+## Skills
+{{ range .Skills }}
+- **{{ md .Category }}:** {{ range $i, $it := .Items }}{{ if $i }}, {{ end }}{{ md $it }}{{ end }}
+{{- end }}
+
+## Languages
+{{ range .Languages }}
+- **{{ md .Name }}:** {{ md .Level }}
+{{- end }}
+
+## Certificates & Awards
+{{ range .Certificates }}
+### {{ if .CertURL }}[{{ md .Title }}]({{ urlenc .CertURL }}){{ else }}{{ md .Title }}{{ end }}
+
+{{ if .OrgURL }}[{{ md .Org }}]({{ urlenc .OrgURL }}){{ else }}{{ md .Org }}{{ end }}{{ if .Group }} · {{ md .Group }}{{ end }} · {{ md .Start }}{{ if .End }} – {{ md .End }}{{ end }}
+{{ end }}{{ if .Activities }}## Activities
+{{ range .Activities }}
+### {{ md .Role }}
+
+{{ md .Org }} — {{ md .Location }} · {{ md .Start }}{{ if .End }} – {{ md .End }}{{ end }}
+{{ if .Intro }}
+{{ emph .Intro }}
+{{ end }}{{ end }}{{ end }}

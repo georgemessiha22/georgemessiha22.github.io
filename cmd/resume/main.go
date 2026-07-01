@@ -8,6 +8,7 @@ import (
 	"github.com/georgemessiha22/georgemessiha22/internal/config"
 	"github.com/georgemessiha22/georgemessiha22/internal/html"
 	"github.com/georgemessiha22/georgemessiha22/internal/latex"
+	"github.com/georgemessiha22/georgemessiha22/internal/markdown"
 	"github.com/georgemessiha22/georgemessiha22/internal/model"
 	"github.com/georgemessiha22/georgemessiha22/internal/render"
 	"github.com/georgemessiha22/georgemessiha22/internal/typst"
@@ -23,8 +24,9 @@ Usage:
 Commands:
   typst   Generate Typst (.typ) source
   tex     Generate LaTeX (.tex) source
+  md      Generate Markdown (.md) source
   html    Generate the HTML mini-site
-  all     Generate typst+tex (both variants) and the html site
+  all     Generate typst+tex+md (both variants) and the html site
 
 Flags:
   --input   path to YAML (default resume.yaml)
@@ -65,6 +67,8 @@ func run(cmd, input, variant, out string) error {
 		return generate(typst.Renderer{}, r, parseVariant(variant), pick(out, defGen))
 	case "tex":
 		return generate(latex.Renderer{}, r, parseVariant(variant), pick(out, defGen))
+	case "md":
+		return generate(markdown.Renderer{}, r, parseVariant(variant), pick(out, defGen))
 	case "html":
 		return generate(html.Renderer{}, r, model.Detailed, pick(out, defSite))
 	case "all":
@@ -78,6 +82,12 @@ func run(cmd, input, variant, out string) error {
 			return err
 		}
 		if err := generate(latex.Renderer{}, r, model.Detailed, defGen); err != nil {
+			return err
+		}
+		if err := generate(markdown.Renderer{}, r, model.Summary, defGen); err != nil {
+			return err
+		}
+		if err := generate(markdown.Renderer{}, r, model.Detailed, defGen); err != nil {
 			return err
 		}
 		return generate(html.Renderer{}, r, model.Detailed, defSite)
