@@ -3,7 +3,7 @@ PWD=$(shell pwd)
 GEN=build/gen
 TYPST_FONTS=typst/fonts
 
-.PHONY: build bash gen resume detailed typst typst-resume typst-detailed md site clean all
+.PHONY: build bash gen resume detailed typst typst-resume typst-detailed md site clean distclean all
 
 build:
 	docker build -f build/Dockerfile -t tex:latest -t tex:$(VERSION_TAG) .
@@ -50,5 +50,9 @@ site: gen
 
 clean:
 	rm -f dist/*.aux dist/*.out dist/*.log
+
+# Remove all generated output (PDFs, Markdown, sources, site).
+distclean:
+	rm -rf dist $(GEN) site
 
 all: build resume detailed typst md site clean
