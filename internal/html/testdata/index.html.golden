@@ -31,6 +31,13 @@
   <h2>Professional Summary</h2>
   <p>A summary with <strong>bold</strong> &amp; &lt;tags&gt;.</p>
 </section>
+<section class="projects">
+  <h2>Personal Projects</h2><p>I love <strong>automation</strong> and the terminal.</p>
+  <ul class="project-list">
+    <li><span class="pi-wrap"><svg class="pi" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" fill="currentColor"><path d="M2 2v12l3-3V5l6 8h3V2h-2v9L4 2H2z"/></svg></span><a href="https://github.com/georgemessiha22/GogoNvim">GogoNvim</a> — My <strong>Neovim</strong> config.</li>
+    <li><span class="pi-wrap"><svg class="pi" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="2.5" width="13" height="11" rx="1.5"/><path d="M4 6l2.5 2L4 10"/><path d="M8 10.5h4"/></svg></span><a href="https://github.com/georgemessiha22/dotfiles">dotfiles</a> — My terminal setup.</li>
+  </ul>
+</section>
 
 <section>
   <h2>Experience</h2>

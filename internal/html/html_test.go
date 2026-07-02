@@ -21,6 +21,13 @@ func fixture() model.Resume {
 			Socials: model.Socials{GitHub: "georgemessiha22", LinkedIn: "georgemessiha22"},
 		},
 		Summary: "A summary with **bold** & <tags>.",
+		PersonalProjects: model.PersonalProjects{
+			Intro: "I love **automation** and the terminal.",
+			Links: []model.ProjectLink{
+				{Name: "GogoNvim", URL: "https://github.com/georgemessiha22/GogoNvim", Description: "My **Neovim** config.", Icon: "neovim"},
+				{Name: "dotfiles", URL: "https://github.com/georgemessiha22/dotfiles", Description: "My terminal setup.", Icon: "terminal"},
+			},
+		},
 		Experience: []model.Entry{{
 			Role: "Senior Software Engineer", Org: "HungerStation",
 			OrgURL: "https://hungerstation.com", Location: "Dubai, UAE", Mode: "Hybrid",
@@ -75,6 +82,12 @@ func TestRenderMiniSite(t *testing.T) {
 		"https://github.com/example/example/releases/latest/download/George_Messiha_detailed_resume_v2.pdf",
 		"https://github.com/example/example/releases/latest/download/George_Messiha_Resume.md",
 		"https://github.com/example/example/releases/latest/download/George_Messiha_detailed_resume.md",
+		`class="projects"`,
+		`class="project-list"`,
+		`<svg`,
+		"https://github.com/georgemessiha22/GogoNvim",
+		"https://github.com/georgemessiha22/dotfiles",
+		"<strong>Neovim</strong>",
 	} {
 		if !strings.Contains(string(index), want) {
 			t.Fatalf("index.html missing %q", want)

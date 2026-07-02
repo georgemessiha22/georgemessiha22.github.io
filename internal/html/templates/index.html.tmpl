@@ -47,6 +47,18 @@
   <p>{{ emph .Summary }}</p>
 </section>
 
+{{- if .PersonalProjects.Links }}
+<section class="projects">
+  <h2>Personal Projects</h2>
+  {{- if .PersonalProjects.Intro }}<p>{{ emph .PersonalProjects.Intro }}</p>{{ end }}
+  <ul class="project-list">
+  {{- range .PersonalProjects.Links }}
+    <li><span class="pi-wrap">{{ projectIcon .Icon }}</span><a href="{{ .URL }}">{{ .Name }}</a>{{ if .Description }} — {{ emph .Description }}{{ end }}</li>
+  {{- end }}
+  </ul>
+</section>
+{{- end }}
+
 <section>
   <h2>Experience</h2>
   <div class="timeline">

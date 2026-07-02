@@ -30,6 +30,10 @@ h2 { color: var(--accent); border-bottom: 1px solid var(--line); padding-bottom:
 .tl-item ul { margin: .4rem 0 0; padding-left: 1.1rem; }
 .skills div { margin: .2rem 0; }
 .skills .cat { font-weight: 600; }
+.project-list { list-style: none; margin: .4rem 0 0; padding-left: 0; }
+.project-list li { display: flex; align-items: baseline; gap: .5rem; margin: .35rem 0; }
+.pi-wrap { flex: none; color: var(--accent); line-height: 1; transform: translateY(2px); }
+.pi { display: block; }
 @media print { body { padding: 0; } a { color: var(--ink); } .downloads { display: none; } .site-nav { display: none; } }
 
 /* Site navigation tabs */
