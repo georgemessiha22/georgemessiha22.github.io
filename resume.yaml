@@ -36,6 +36,25 @@ summary: >-
   senior engineers, and aligning technical roadmaps to business goals to improve
   system performance, developer velocity, and platform stability.
 
+# Personal side projects — rendered ONLY on the HTML site (GitHub Pages).
+# The PDF and Markdown outputs ignore this block. Each link's `icon` selects an
+# inline SVG glyph: github | neovim | terminal (default: github).
+personal_projects:
+  intro: >-
+    I'm a bit obsessed with **customization** and **automation** — I live in the
+    terminal and love tuning every tool until it feels like an extension of my
+    hands. When I'm not shipping backend systems, I'm sharpening my own developer
+    environment.
+  links:
+    - name: GogoNvim
+      url: https://github.com/georgemessiha22/GogoNvim
+      description: My from-scratch **Neovim** configuration, tuned for fast, keyboard-driven development.
+      icon: neovim
+    - name: dotfiles
+      url: https://github.com/georgemessiha22/dotfiles
+      description: My portable terminal and system setup — shell, editor, and tooling, reproducible on any machine.
+      icon: terminal
+
 experience:
   - role: Senior Software Engineer
     org: HungerStation (Delivery Hero)
