@@ -68,6 +68,21 @@ type Cert struct {
 	Variants []Variant
 }
 
+// ProjectLink is a single personal/side project link (HTML site only).
+type ProjectLink struct {
+	Name        string
+	URL         string
+	Description string
+	Icon        string // icon keyword: "github", "neovim", "terminal" (empty => "github")
+}
+
+// PersonalProjects is an optional block of side projects shown only on the
+// HTML site (GitHub Pages). It is not rendered in the PDF or Markdown outputs.
+type PersonalProjects struct {
+	Intro string
+	Links []ProjectLink
+}
+
 // Resume is the whole document.
 type Resume struct {
 	Contact      Contact
@@ -86,6 +101,9 @@ type Resume struct {
 	// "https://georgemessiha22.github.io"). Used as the website link in the
 	// PDFs and for absolute links on the HTML site. Optional.
 	SiteURL string
+	// PersonalProjects is an optional block of side-project links rendered only
+	// on the HTML site (GitHub Pages). Empty => the section is omitted. Optional.
+	PersonalProjects PersonalProjects
 }
 
 func includesVariant(vs []Variant, v Variant) bool {
