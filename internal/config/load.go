@@ -26,15 +26,16 @@ type yamlResume struct {
 			LinkedIn string `yaml:"linkedin"`
 		} `yaml:"socials"`
 	} `yaml:"contact"`
-	Summary      string      `yaml:"summary"`
-	Experience   []yamlEntry `yaml:"experience"`
-	Education    []yamlEntry `yaml:"education"`
-	Skills       []yamlSkill `yaml:"skills"`
-	Languages    []yamlLang  `yaml:"languages"`
-	Certificates []yamlCert  `yaml:"certificates"`
-	Activities   []yamlEntry `yaml:"activities"`
-	ReleasesURL  string      `yaml:"releases_url"`
-	SiteURL      string      `yaml:"site_url"`
+	Summary          string               `yaml:"summary"`
+	Experience       []yamlEntry          `yaml:"experience"`
+	Education        []yamlEntry          `yaml:"education"`
+	Skills           []yamlSkill          `yaml:"skills"`
+	Languages        []yamlLang           `yaml:"languages"`
+	Certificates     []yamlCert           `yaml:"certificates"`
+	Activities       []yamlEntry          `yaml:"activities"`
+	ReleasesURL      string               `yaml:"releases_url"`
+	SiteURL          string               `yaml:"site_url"`
+	PersonalProjects yamlPersonalProjects `yaml:"personal_projects"`
 }
 
 type yamlEntry struct {
@@ -74,6 +75,18 @@ type yamlCert struct {
 	Variants []string `yaml:"variants"`
 }
 
+type yamlPersonalProjects struct {
+	Intro string            `yaml:"intro"`
+	Links []yamlProjectLink `yaml:"links"`
+}
+
+type yamlProjectLink struct {
+	Name        string `yaml:"name"`
+	URL         string `yaml:"url"`
+	Description string `yaml:"description"`
+	Icon        string `yaml:"icon"`
+}
+
 func toVariants(in []string) []model.Variant {
 	if len(in) == 0 {
 		return nil
@@ -98,6 +111,17 @@ func toEntries(in []yamlEntry) []model.Entry {
 	out := make([]model.Entry, 0, len(in))
 	for _, y := range in {
 		out = append(out, toEntry(y))
+	}
+	return out
+}
+
+func toProjectLinks(in []yamlProjectLink) []model.ProjectLink {
+	if len(in) == 0 {
+		return nil
+	}
+	out := make([]model.ProjectLink, 0, len(in))
+	for _, l := range in {
+		out = append(out, model.ProjectLink{Name: l.Name, URL: l.URL, Description: l.Description, Icon: l.Icon})
 	}
 	return out
 }
@@ -134,6 +158,10 @@ func Load(path string) (model.Resume, error) {
 		Activities:  toEntries(y.Activities),
 		ReleasesURL: y.ReleasesURL,
 		SiteURL:     y.SiteURL,
+		PersonalProjects: model.PersonalProjects{
+			Intro: y.PersonalProjects.Intro,
+			Links: toProjectLinks(y.PersonalProjects.Links),
+		},
 	}
 	for _, s := range y.Skills {
 		r.Skills = append(r.Skills, model.SkillGroup{Category: s.Category, Items: s.Items})

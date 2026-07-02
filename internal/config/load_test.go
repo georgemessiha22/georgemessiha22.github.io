@@ -26,6 +26,29 @@ func TestLoad_Valid(t *testing.T) {
 	}
 }
 
+func TestLoad_PersonalProjects(t *testing.T) {
+	r, err := Load("testdata/valid.yaml")
+	if err != nil {
+		t.Fatalf("unexpected error: %v", err)
+	}
+	if r.PersonalProjects.Intro != "I love **automation**." {
+		t.Fatalf("intro not parsed: %q", r.PersonalProjects.Intro)
+	}
+	if len(r.PersonalProjects.Links) != 2 {
+		t.Fatalf("expected 2 project links, got %d", len(r.PersonalProjects.Links))
+	}
+	l0 := r.PersonalProjects.Links[0]
+	if l0.Name != "GogoNvim" || l0.URL != "https://github.com/georgemessiha22/GogoNvim" || l0.Description != "My **Neovim** config." {
+		t.Fatalf("first link not parsed: %+v", l0)
+	}
+	if l0.Icon != "neovim" {
+		t.Fatalf("first link icon not parsed: %q", l0.Icon)
+	}
+	if r.PersonalProjects.Links[1].Name != "dotfiles" {
+		t.Fatalf("second link not parsed: %+v", r.PersonalProjects.Links[1])
+	}
+}
+
 func TestLoad_MissingName(t *testing.T) {
 	_, err := Load("testdata/missing_name.yaml")
 	if err == nil || !strings.Contains(err.Error(), "name") {

@@ -35,3 +35,14 @@ certificates:
     start: "2024"
     end: "2024"
     variants: [summary, detailed]
+personal_projects:
+  intro: I love **automation**.
+  links:
+    - name: GogoNvim
+      url: https://github.com/georgemessiha22/GogoNvim
+      description: My **Neovim** config.
+      icon: neovim
+    - name: dotfiles
+      url: https://github.com/georgemessiha22/dotfiles
+      description: My terminal setup.
+      icon: terminal
