@@ -1,0 +1,19 @@
+web/tailwind.config.ts
+  s_c5ceb55b623ce6::t_6dfc984eb09708 11-17
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "8153e36df9062dbc7e0d1af36fc0f400791a58cc",
+  "prompts": {},
+  "sessions": {
+    "s_c5ceb55b623ce6": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_01524686dffe7OoRpWFtAy7Mv0",
+        "model": "claude-opus-4.8"
+      },
+      "human_author": "George Messiha <georgemessiha22@gmail.com>"
+    }
+  }
+}
