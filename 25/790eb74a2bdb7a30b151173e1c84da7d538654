@@ -1,0 +1,21 @@
+.gitignore
+  s_c5ceb55b623ce6::t_1ff66ea85a44a7 12-14
+docs/superpowers/specs/2026-08-10-sveltekit-shadcn-site-revamp-design.md
+  s_c5ceb55b623ce6::t_18fe99ff8302cd 1-103
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "25790eb74a2bdb7a30b151173e1c84da7d538654",
+  "prompts": {},
+  "sessions": {
+    "s_c5ceb55b623ce6": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_01524686dffe7OoRpWFtAy7Mv0",
+        "model": "claude-opus-4.8"
+      },
+      "human_author": "George Messiha <georgemessiha22@gmail.com>"
+    }
+  }
+}
