@@ -1,0 +1,19 @@
+resume.yaml
+  s_c5ceb55b623ce6::t_a0614deb22c93b 226
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "a9956d49add33dce4773ce06c2d387459f2788c3",
+  "prompts": {},
+  "sessions": {
+    "s_c5ceb55b623ce6": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_01524686dffe7OoRpWFtAy7Mv0",
+        "model": "claude-opus-4.8"
+      },
+      "human_author": "George Messiha <georgemessiha22@gmail.com>"
+    }
+  }
+}
