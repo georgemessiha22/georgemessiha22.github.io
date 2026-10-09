@@ -1,0 +1,178 @@
+build/assets/web/src/lib/components/ui/dropdown-menu/dropdown-menu-sub-trigger.svelte
+  s_588c16af984abb::t_88d4dbe01ad07b 1-29
+README.md
+  s_588c16af984abb::t_94e060cae5cbf5 17,19,25-26,49,63,66,108,111,115,118,128,132,142,148-149,151
+  s_588c16af984abb::t_c7d1e3a90316cb 42
+  s_dfe6e9ac862fcf::t_ade7c8df4fb7bd 141
+build/assets/web/src/lib/components/ui/card/index.ts
+  s_588c16af984abb::t_88d4dbe01ad07b 1-25
+build/assets/web/src/lib/components/ui/dropdown-menu/dropdown-menu.svelte
+  s_588c16af984abb::t_88d4dbe01ad07b 1-7
+build/assets/web/src/lib/components/ui/button/index.ts
+  s_588c16af984abb::t_88d4dbe01ad07b 1-17
+build/assets/web/src/lib/components/ui/badge/badge.svelte
+  s_588c16af984abb::t_88d4dbe01ad07b 1-49
+build/assets/web/src/lib/components/ui/card/card-title.svelte
+  s_588c16af984abb::t_88d4dbe01ad07b 1-20
+build/assets/web/src/lib/components/ui/dropdown-menu/dropdown-menu-shortcut.svelte
+  s_588c16af984abb::t_88d4dbe01ad07b 1-20
+build/assets/web/src/lib/components/Nav.svelte
+  s_588c16af984abb::t_88d4dbe01ad07b 1-43
+build/assets/web/scripts/prepare.mjs
+  s_588c16af984abb::t_8f7eba9ea117e3 1-156
+build/assets/web/src/lib/emph.ts
+  s_588c16af984abb::t_88d4dbe01ad07b 1-22
+build/assets/web/src/routes/blog/+page.svelte
+  s_588c16af984abb::t_88d4dbe01ad07b 1-38
+build/assets/web/.gitignore
+  s_588c16af984abb::t_8f7eba9ea117e3 1-16
+resume.schema.json
+  s_dfe6e9ac862fcf::t_fa9b400cb0e0b7 1-338
+Makefile
+  s_588c16af984abb::t_8f7eba9ea117e3 4,48,55-56,63-64
+  s_588c16af984abb::t_c7d1e3a90316cb 18
+build/assets/web/package.json
+  s_588c16af984abb::t_88d4dbe01ad07b 1-37
+build/assets/web/src/lib/components/ThemeToggle.svelte
+  s_588c16af984abb::t_88d4dbe01ad07b 1-29
+build/assets/web/src/lib/components/ui/dropdown-menu/dropdown-menu-checkbox-item.svelte
+  s_588c16af984abb::t_88d4dbe01ad07b 1-44
+build/assets/web/src/lib/format.ts
+  s_588c16af984abb::t_88d4dbe01ad07b 1-15
+build/assets/web/src/lib/utils.ts
+  s_588c16af984abb::t_88d4dbe01ad07b 1-11
+build/assets/web/src/app.html
+  s_588c16af984abb::t_88d4dbe01ad07b 1-20
+build/assets/web/src/lib/components/ui/dropdown-menu/dropdown-menu-trigger.svelte
+  s_588c16af984abb::t_88d4dbe01ad07b 1-7
+build/assets/web/src/lib/components/ui/dropdown-menu/dropdown-menu-checkbox-group.svelte
+  s_588c16af984abb::t_88d4dbe01ad07b 1-16
+build/assets/web/src/routes/blog/[slug]/+page.svelte
+  s_588c16af984abb::t_88d4dbe01ad07b 1-106
+build/assets/web/src/lib/components/ui/dropdown-menu/dropdown-menu-content.svelte
+  s_588c16af984abb::t_88d4dbe01ad07b 1-31
+build/assets/web/src/lib/components/Icon.svelte
+  s_588c16af984abb::t_88d4dbe01ad07b 1-45
+build/assets/web/src/lib/components/ui/dropdown-menu/dropdown-menu-label.svelte
+  s_588c16af984abb::t_88d4dbe01ad07b 1-24
+build/assets/web/svelte.config.js
+  s_588c16af984abb::t_8f7eba9ea117e3 1-25
+build/assets/web/src/lib/components/ui/dropdown-menu/dropdown-menu-sub-content.svelte
+  s_588c16af984abb::t_88d4dbe01ad07b 1-17
+build/assets/web/static/favicon.svg
+  s_588c16af984abb::t_88d4dbe01ad07b 1-10
+build/assets/web/src/lib/components/ui/dropdown-menu/dropdown-menu-radio-item.svelte
+  s_588c16af984abb::t_88d4dbe01ad07b 1-34
+build/assets/web/src/routes/timeline/+page.svelte
+  s_588c16af984abb::t_88d4dbe01ad07b 1-124
+resume.yaml
+  s_588c16af984abb::t_8f7eba9ea117e3 221,233,289,298,306,314,321,329,338,347,357,367,377,387,397,407
+  s_588c16af984abb::t_c7d1e3a90316cb 24
+  s_dfe6e9ac862fcf::t_79dd54b6afb0c8 1
+  s_588c16af984abb::t_a2eebdeb3deeea 47-49,78-80
+internal/typst/testdata/summary.typ.golden
+  s_588c16af984abb::t_5ab8e998ae3d6f 15
+build/assets/typst/fonts/README.md
+  s_588c16af984abb::t_88d4dbe01ad07b 1-18
+build/assets/web/src/lib/components/ui/dropdown-menu/dropdown-menu-group-heading.svelte
+  s_588c16af984abb::t_88d4dbe01ad07b 1-22
+build/assets/web/src/lib/components/ui/dropdown-menu/dropdown-menu-radio-group.svelte
+  s_588c16af984abb::t_88d4dbe01ad07b 1-16
+build/assets/web/src/lib/components/ui/card/card-action.svelte
+  s_588c16af984abb::t_88d4dbe01ad07b 1-23
+build/assets/web/components.json
+  s_588c16af984abb::t_88d4dbe01ad07b 1-20
+build/assets/web/src/lib/components/ui/dropdown-menu/dropdown-menu-separator.svelte
+  s_588c16af984abb::t_88d4dbe01ad07b 1-17
+build/assets/web/src/lib/components/ui/separator/separator.svelte
+  s_588c16af984abb::t_88d4dbe01ad07b 1-23
+build/assets/web/src/lib/components/ui/card/card.svelte
+  s_588c16af984abb::t_88d4dbe01ad07b 1-22
+build/assets/web/src/lib/components/ui/dropdown-menu/dropdown-menu-item.svelte
+  s_588c16af984abb::t_88d4dbe01ad07b 1-27
+build/assets/web/src/lib/components/ui/dropdown-menu/dropdown-menu-sub.svelte
+  s_588c16af984abb::t_88d4dbe01ad07b 1-7
+build/assets/web/tsconfig.json
+  s_588c16af984abb::t_88d4dbe01ad07b 1-14
+build/assets/web/vite.config.ts
+  s_588c16af984abb::t_88d4dbe01ad07b 1-7
+build/assets/web/src/app.d.ts
+  s_588c16af984abb::t_88d4dbe01ad07b 1-6
+build/assets/web/src/lib/components/Emph.svelte
+  s_588c16af984abb::t_88d4dbe01ad07b 1-16
+build/assets/web/src/routes/+layout.svelte
+  s_588c16af984abb::t_88d4dbe01ad07b 1-28
+build/assets/web/src/routes/blog/[slug]/+page.ts
+  s_588c16af984abb::t_88d4dbe01ad07b 1-12
+build/assets/web/src/lib/components/ui/badge/index.ts
+  s_588c16af984abb::t_88d4dbe01ad07b 1-2
+internal/config/testdata/valid.yaml
+  s_588c16af984abb::t_c7d1e3a90316cb 8
+build/assets/web/src/lib/components/TimelineList.svelte
+  s_588c16af984abb::t_88d4dbe01ad07b 1-74
+build/assets/web/src/lib/components/ui/dropdown-menu/dropdown-menu-group.svelte
+  s_588c16af984abb::t_88d4dbe01ad07b 1-7
+AGENTS.md
+  s_dfe6e9ac862fcf::t_fa9b400cb0e0b7 1-7
+build/assets/web/src/lib/components/ui/dropdown-menu/dropdown-menu-portal.svelte
+  s_588c16af984abb::t_88d4dbe01ad07b 1-7
+build/assets/web/src/lib/components/ui/card/card-header.svelte
+  s_588c16af984abb::t_88d4dbe01ad07b 1-23
+internal/typst/templates/resume.typ.tmpl
+  s_588c16af984abb::t_5ab8e998ae3d6f 24
+build/assets/web/src/lib/components/ui/dropdown-menu/index.ts
+  s_588c16af984abb::t_88d4dbe01ad07b 1-54
+build/assets/web/src/lib/components/ui/card/card-footer.svelte
+  s_588c16af984abb::t_88d4dbe01ad07b 1-20
+build/assets/web/src/routes/+layout.ts
+  s_588c16af984abb::t_88d4dbe01ad07b 1-3
+.github/workflows/release.yml
+  s_588c16af984abb::t_8f7eba9ea117e3 40,76
+build/assets/web/src/lib/components/ui/card/card-content.svelte
+  s_588c16af984abb::t_88d4dbe01ad07b 1-20
+cmd/resume/main.go
+  s_588c16af984abb::t_3e942484ee765a 28,34
+  s_588c16af984abb::t_8f7eba9ea117e3 63
+build/assets/web/src/routes/+page.svelte
+  s_588c16af984abb::t_88d4dbe01ad07b 1-160
+build/assets/web/src/lib/posts.ts
+  s_588c16af984abb::t_88d4dbe01ad07b 1-38
+build/assets/blog/perfect-go-project/index.md
+  s_588c16af984abb::t_88d4dbe01ad07b 1-236
+build/assets/web/src/app.css
+  s_588c16af984abb::t_88d4dbe01ad07b 1-283
+build/assets/web/src/lib/components/ui/separator/index.ts
+  s_588c16af984abb::t_88d4dbe01ad07b 1-7
+build/assets/web/src/lib/components/ui/button/button.svelte
+  s_588c16af984abb::t_88d4dbe01ad07b 1-82
+build/assets/web/src/lib/components/DownloadMenu.svelte
+  s_588c16af984abb::t_88d4dbe01ad07b 1-52
+build/assets/web/src/lib/types.ts
+  s_588c16af984abb::t_88d4dbe01ad07b 1-96
+build/assets/web/src/lib/components/ui/card/card-description.svelte
+  s_588c16af984abb::t_88d4dbe01ad07b 1-20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "b63fc3f383c9618849216d3b2b7c005ae7927c6f",
+  "prompts": {},
+  "sessions": {
+    "s_588c16af984abb": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_ee03acb07ffe9e7b5Pd6WH76R9",
+        "model": "claude-sonnet-5.5"
+      },
+      "human_author": "George Messiha <georgemessiha22@gmail.com>"
+    },
+    "s_dfe6e9ac862fcf": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_ee0433debffekqxX3QFGnkZROC",
+        "model": "claude-sonnet-5.5"
+      },
+      "human_author": "George Messiha <georgemessiha22@gmail.com>"
+    }
+  }
+}
