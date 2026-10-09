@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { parseSpans } from '$lib/emph';
+	import { parseSpans } from '#lib/emph';
 
 	interface Props {
 		text?: string;

@@ -47,7 +47,8 @@ async function rmrf(dir) {
 // Split leading `---` YAML front-matter from the markdown body.
 function splitFrontMatter(src) {
 	const m = /^---\r?\n([\s\S]*?)\r?\n---\r?\n?/.exec(src);
-	if (!m) return { fm: {}, body: src };
+	if (!m) return { fm: /** @type {Record<string,string>} */ ({}), body: src };
+	/** @type {Record<string,string>} */
 	const fm = {};
 	for (const line of m[1].split(/\r?\n/)) {
 		const kv = /^([A-Za-z0-9_-]+)\s*:\s*(.*)$/.exec(line);

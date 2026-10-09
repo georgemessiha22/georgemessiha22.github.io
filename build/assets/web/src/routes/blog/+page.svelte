@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { posts } from '$lib/posts';
-	import { formatMonth } from '$lib/format';
-	import * as Card from '$lib/components/ui/card';
+	import { posts } from '#lib/posts';
+	import { formatMonth } from '#lib/format';
+	import * as Card from '#lib/components/ui/card';
 </script>
 
 <svelte:head>

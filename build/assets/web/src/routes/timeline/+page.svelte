@@ -1,9 +1,9 @@
 <script lang="ts">
-	import resume from '$lib/data/resume.json';
-	import type { Resume, Entry, VariantName } from '$lib/types';
-	import TimelineList from '$lib/components/TimelineList.svelte';
-	import { Badge } from '$lib/components/ui/badge';
-	import { cn } from '$lib/utils';
+	import resume from '#lib/data/resume.json';
+	import type { Resume, Entry, VariantName } from '#lib/types';
+	import TimelineList from '#lib/components/TimelineList.svelte';
+	import { Badge } from '#lib/components/ui/badge';
+	import { cn } from '#lib/utils';
 
 	const r = resume as Resume;
 

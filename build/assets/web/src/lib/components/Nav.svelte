@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import ThemeToggle from './ThemeToggle.svelte';
-	import { cn } from '$lib/utils';
+	import { cn } from '#lib/utils';
 
 	interface Props {
 		brand: string;
@@ -31,7 +31,7 @@
 					href={l.href}
 					class={cn(
 						'rounded-md px-2.5 py-1.5 text-sm transition-colors',
-						isActive(l.href, $page.url.pathname)
+						isActive(l.href, page.url.pathname)
 							? 'font-medium text-foreground'
 							: 'text-muted-foreground hover:text-foreground'
 					)}>{l.label}</a

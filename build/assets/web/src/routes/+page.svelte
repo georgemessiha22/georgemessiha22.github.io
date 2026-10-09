@@ -1,12 +1,12 @@
 <script lang="ts">
-	import resume from '$lib/data/resume.json';
-	import type { Resume, ProjectLink } from '$lib/types';
-	import { posts } from '$lib/posts';
-	import { formatMonth } from '$lib/format';
-	import Emph from '$lib/components/Emph.svelte';
-	import Icon from '$lib/components/Icon.svelte';
-	import DownloadMenu from '$lib/components/DownloadMenu.svelte';
-	import * as Card from '$lib/components/ui/card';
+	import resume from '#lib/data/resume.json';
+	import type { Resume, ProjectLink } from '#lib/types';
+	import { posts } from '#lib/posts';
+	import { formatMonth } from '#lib/format';
+	import Emph from '#lib/components/Emph.svelte';
+	import Icon from '#lib/components/Icon.svelte';
+	import DownloadMenu from '#lib/components/DownloadMenu.svelte';
+	import * as Card from '#lib/components/ui/card';
 
 	const r = resume as Resume;
 	const c = r.contact;

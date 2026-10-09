@@ -1,8 +1,8 @@
 <script lang="ts">
-	import type { Download } from '$lib/types';
-	import * as DropdownMenu from '$lib/components/ui/dropdown-menu';
+	import type { Download } from '#lib/types';
+	import * as DropdownMenu from '#lib/components/ui/dropdown-menu';
 	import { Download as DownloadIcon, ChevronDown } from '@lucide/svelte';
-	import { cn } from '$lib/utils';
+	import { cn } from '#lib/utils';
 
 	interface Props {
 		downloads: Download[];

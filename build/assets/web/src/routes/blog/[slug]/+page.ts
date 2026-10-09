@@ -1,5 +1,5 @@
 import { error } from '@sveltejs/kit';
-import { posts, getPostMeta } from '$lib/posts';
+import { posts, getPostMeta } from '#lib/posts';
 
 export function entries() {
 	return posts.map((p) => ({ slug: p.slug }));

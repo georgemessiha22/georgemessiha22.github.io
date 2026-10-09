@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { tick } from 'svelte';
-	import { getPostComponent } from '$lib/posts';
-	import { formatDate } from '$lib/format';
-	import Icon from '$lib/components/Icon.svelte';
+	import { getPostComponent } from '#lib/posts';
+	import { formatDate } from '#lib/format';
+	import Icon from '#lib/components/Icon.svelte';
 
 	let { data } = $props();
 	let Post = $derived(getPostComponent(data.slug));

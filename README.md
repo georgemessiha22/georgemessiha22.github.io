@@ -96,7 +96,7 @@ renders the date and the Markdown body (which owns the title). Regenerate with
 
 ### Prerequisites
 - [Go](https://go.dev) 1.26+
-- [Node.js](https://nodejs.org) 20+ (for the SvelteKit site)
+- [Node.js](https://nodejs.org) 22.17+ (for the SvelteKit site)
 - [Typst](https://github.com/typst/typst) 0.15+ (for the Typst PDFs)
 - Docker (for the LaTeX PDFs)
 

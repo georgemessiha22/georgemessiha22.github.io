@@ -1,5 +1,5 @@
 import type { Component } from 'svelte';
-import postsMeta from '$lib/data/posts.json';
+import postsMeta from '#lib/data/posts.json';
 
 export interface PostMeta {
 	slug: string;

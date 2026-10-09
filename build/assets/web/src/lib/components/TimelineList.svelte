@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Entry } from '$lib/types';
+	import type { Entry } from '#lib/types';
 	import Emph from './Emph.svelte';
 	import Icon from './Icon.svelte';
 

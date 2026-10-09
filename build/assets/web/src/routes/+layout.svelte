@@ -1,9 +1,9 @@
 <script lang="ts">
 	import '../app.css';
 	import type { Snippet } from 'svelte';
-	import resume from '$lib/data/resume.json';
-	import type { Resume } from '$lib/types';
-	import Nav from '$lib/components/Nav.svelte';
+	import resume from '#lib/data/resume.json';
+	import type { Resume } from '#lib/types';
+	import Nav from '#lib/components/Nav.svelte';
 
 	const r = resume as Resume;
 	const brand = `${r.contact.firstname} ${r.contact.lastname}`.trim();
