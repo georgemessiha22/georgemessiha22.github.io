@@ -1,0 +1,35 @@
+internal/render/render.go
+  s_91dfb4bbfe7dc4::t_7f265496a4819b 53-80,82-84
+  s_91dfb4bbfe7dc4::t_4c4d765b168877 81
+internal/typst/typst.go
+  s_91dfb4bbfe7dc4::t_d7f2f1147433f9 60-63
+  s_91dfb4bbfe7dc4::t_7f265496a4819b 64
+internal/latex/testdata/summary.tex.golden
+  s_91dfb4bbfe7dc4::t_3f14fabdffebcc 22
+internal/typst/testdata/summary.typ.golden
+  s_91dfb4bbfe7dc4::t_651c2698c18f8e 19
+  s_91dfb4bbfe7dc4::t_3c577ebc86d4f1 20
+internal/typst/templates/resume.typ.tmpl
+  s_91dfb4bbfe7dc4::t_651c2698c18f8e 19
+  s_91dfb4bbfe7dc4::t_4e3cff4993b7e3 20
+internal/latex/templates/resume.tex.tmpl
+  s_91dfb4bbfe7dc4::t_3f14fabdffebcc 22
+internal/latex/latex.go
+  s_91dfb4bbfe7dc4::t_7f265496a4819b 63-64
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "230e666d57a164f773207cef9df839a8b342d1e0",
+  "prompts": {},
+  "sessions": {
+    "s_91dfb4bbfe7dc4": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_edf777356ffeJwK6zJQUzZ038F",
+        "model": "claude-sonnet-5.5"
+      },
+      "human_author": "George Messiha <georgemessiha22@gmail.com>"
+    }
+  }
+}
