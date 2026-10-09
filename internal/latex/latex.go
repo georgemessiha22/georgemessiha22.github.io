@@ -60,6 +60,8 @@ func (Renderer) Render(r model.Resume, v model.Variant) ([]render.Artifact, erro
 		"esc":         escape,
 		"emph":        emphasize,
 		"stripscheme": stripScheme,
+		"short":       render.ShortURL,
+		"contact":     func(r model.Resume) []string { return render.ContactItems(r.Contact, r.SiteURL) },
 	}).ParseFS(tmplFS, "templates/resume.tex.tmpl")
 	if err != nil {
 		return nil, err

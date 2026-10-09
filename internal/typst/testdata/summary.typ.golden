@@ -4,11 +4,6 @@
   author: (
     firstname: "George",
     lastname: "Messiha",
-    email: "g@example.com",
-    phone: "(+971) 54 555 1032",
-    homepage: "https://example.github.io",
-    github: "georgemessiha22",
-    linkedin: "georgemessiha22",
     address: "Dubai, UAE",
     positions: ("Lead SWE",),
   ),
@@ -20,6 +15,8 @@
   paper-size: "a4",
   font: ("Source Sans 3",),
 )
+
+#align(center, text(size: 7.5pt)[#"g@example.com" | #"(+971) 54 555 1032"#linebreak()#"https://example.github.io" | #"https://github.com/georgemessiha22" | #"https://linkedin.com/in/georgemessiha22"])
 
 = Professional Summary
 

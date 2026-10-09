@@ -17,22 +17,9 @@
 \familyname{ {{- esc .Contact.Lastname -}} }
 \title{ {{- esc .Contact.Title -}} }
 \address{ {{- esc .Contact.Location -}} }{}
-\mobile{ {{- esc .Contact.Phone -}} }
-\email{ {{- esc .Contact.Email -}} }
-{{- if .SiteURL }}
-\homepage{ {{- esc (stripscheme .SiteURL) -}} }
-{{- end }}
-{{- if .Contact.Socials.LinkedIn }}
-\social[linkedin]{ {{- esc .Contact.Socials.LinkedIn -}} }
-{{- end }}
-{{- if .Contact.Socials.GitHub }}
-\social[github]{ {{- esc .Contact.Socials.GitHub -}} }
-{{- end }}
-{{- if .Contact.Socials.GitLab }}
-\social[gitlab]{ {{- esc .Contact.Socials.GitLab -}} }
-{{- end }}
 \begin{document}
 \makecvtitle
+\begin{center}\small{} {{ range $i, $c := contact . }}{{ if eq $i 2 }}\\{{ else if $i }} \textbar{} {{ end }}{{ esc $c }}{{ end }}\end{center}
 
 \section{\textbf{Professional Summary}}
 \cvitem{}{ {{- emph .Summary -}} }

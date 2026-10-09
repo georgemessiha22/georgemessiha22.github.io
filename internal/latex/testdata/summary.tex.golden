@@ -17,13 +17,9 @@
 \familyname{Messiha}
 \title{Lead SWE}
 \address{Dubai, UAE}{}
-\mobile{(+971) 54 555 1032}
-\email{g@example.com}
-\homepage{example.github.io}
-\social[linkedin]{georgemessiha22}
-\social[github]{georgemessiha22}
 \begin{document}
 \makecvtitle
+\begin{center}\small{} g@example.com \textbar{} (+971) 54 555 1032\\https://example.github.io \textbar{} https://github.com/georgemessiha22 \textbar{} https://linkedin.com/in/georgemessiha22\end{center}
 
 \section{\textbf{Professional Summary}}
 \cvitem{}{A summary with \textbf{bold} \& 50\%.}

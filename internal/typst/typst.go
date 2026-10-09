@@ -57,9 +57,11 @@ func emphasize(s string) string {
 func (Renderer) Render(r model.Resume, v model.Variant) ([]render.Artifact, error) {
 	rr := r.ForVariant(v)
 	t, err := template.New("resume.typ.tmpl").Funcs(template.FuncMap{
-		"esc":  escape,
-		"emph": emphasize,
-		"q":    escapeString,
+		"esc":     escape,
+		"emph":    emphasize,
+		"q":       escapeString,
+		"short":   render.ShortURL,
+		"contact": func(r model.Resume) []string { return render.ContactItems(r.Contact, r.SiteURL) },
 	}).ParseFS(tmplFS, "templates/resume.typ.tmpl")
 	if err != nil {
 		return nil, err

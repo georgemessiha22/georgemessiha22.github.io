@@ -4,20 +4,6 @@
   author: (
     firstname: "{{ q .Contact.Firstname }}",
     lastname: "{{ q .Contact.Lastname }}",
-    email: "{{ q .Contact.Email }}",
-    phone: "{{ q .Contact.Phone }}",
-{{- if .SiteURL }}
-    homepage: "{{ q .SiteURL }}",
-{{- end }}
-{{- if .Contact.Socials.GitHub }}
-    github: "{{ q .Contact.Socials.GitHub }}",
-{{- end }}
-{{- if .Contact.Socials.GitLab }}
-    gitlab: "{{ q .Contact.Socials.GitLab }}",
-{{- end }}
-{{- if .Contact.Socials.LinkedIn }}
-    linkedin: "{{ q .Contact.Socials.LinkedIn }}",
-{{- end }}
     address: "{{ q .Contact.Location }}",
     positions: ("{{ q .Contact.Title }}",),
   ),
@@ -29,6 +15,8 @@
   paper-size: "a4",
   font: ("Source Sans 3",),
 )
+
+#align(center, text(size: 7.5pt)[{{ range $i, $c := contact . }}{{ if eq $i 2 }}#linebreak(){{ else if $i }} | {{ end }}#"{{ q $c }}"{{ end }}])
 
 = Professional Summary
 
