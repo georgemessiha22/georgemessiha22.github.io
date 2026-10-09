@@ -17,7 +17,7 @@
     "@internationalized/date": "^3.12.3",
     "@lucide/svelte": "^1.31.0",
     "@sveltejs/adapter-static": "^3.0.6",
-    "@sveltejs/kit": "^2.8.0",
+    "@sveltejs/kit": "^3.0.1",
     "@sveltejs/vite-plugin-svelte": "^5.0.0",
     "@tailwindcss/vite": "^4.0.0",
     "bits-ui": "^2.18.1",
