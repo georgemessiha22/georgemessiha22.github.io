@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# SvelteKit
+.svelte-kit/
+
+# Generated content (produced by scripts/prepare.mjs)
+src/lib/data/resume.json
+src/lib/data/posts.json
+src/lib/posts/
+static/profile.jpg
+static/blog/
+
+# Vite
+vite.config.ts.timestamp-*
+vite.config.js.timestamp-*

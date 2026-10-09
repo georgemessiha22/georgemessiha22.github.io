@@ -1,0 +1,71 @@
+#import "@preview/modern-cv:0.10.0": *
+
+#show: resume.with(
+  author: (
+    firstname: "George",
+    lastname: "Messiha",
+    email: "g@example.com",
+    phone: "(+971) 54 555 1032",
+    homepage: "https://example.github.io",
+    github: "georgemessiha22",
+    linkedin: "georgemessiha22",
+    address: "Dubai, UAE",
+    positions: ("Lead SWE",),
+  ),
+  profile-picture: none, // image("assets/profile.jpg"),
+  date: datetime.today().display(),
+  language: "en",
+  colored-headers: true,
+  show-footer: false,
+  paper-size: "a4",
+  font: ("Source Sans 3",),
+)
+
+= Professional Summary
+
+#resume-item[
+  A summary with *bold*.
+]
+
+= Experience
+
+#resume-entry(
+  title: "Senior Software Engineer",
+  location: "Dubai, UAE · Hybrid",
+  date: "Nov 2023 - Present",
+  description: smallcaps(link("https://hungerstation.com")[HungerStation]),
+)
+#resume-item[
+  Did things in *Go*.
+  - Built *Go* services.
+  - Cut build 60%.
+]
+
+= Education
+
+#resume-entry(
+  title: "BSc",
+  location: "Cairo, EG",
+  date: "2011 - 2016",
+  description: "GUC",
+)
+#resume-item[
+  _Thesis: Cloud_
+]
+
+= Skills
+
+#resume-skill-item("Languages", ("Go", "Python",))
+
+= Languages
+
+#resume-skill-item("Arabic", (strong("Native"),))
+
+= Certificates & Awards
+
+#resume-entry(
+  title: link("https://x/c.pdf")[PM Foundation],
+  location: "",
+  date: "2024 - 2024",
+  description: "Google",
+)

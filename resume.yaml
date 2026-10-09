@@ -1,0 +1,482 @@
+# yaml-language-server: $schema=./resume.schema.json
+# resume.yaml — single source of truth for the resume generator.
+#
+# Variant tagging:
+#   variants: [summary, detailed]  -> appears in both resumes
+#   variants: [detailed]           -> detailed resume only
+#   (omitted)                      -> appears in both (untagged = both)
+
+# Base URL for downloadable release assets. When set, the HTML site shows PDF
+# download links after the header.
+releases_url: https://github.com/georgemessiha22/georgemessiha22.github.io/releases/latest/download
+
+# Absolute base URL of the published site. Shown as the website link in the PDFs
+# and used for the blog navigation on the HTML site.
+site_url: https://georgemessiha22.github.io
+
+contact:
+  firstname: George
+  lastname: Messiha
+  title: Lead/Staff Software Engineer
+  email: georgemessiha22@gmail.com
+  phone: (+971) 54 555 1032
+  location: Dubai, UAE
+  photo: build/assets/pictures/61673.jpg
+  socials:
+    github: georgemessiha22
+    gitlab: georgemessiha22
+    linkedin: georgemessiha22
+
+summary: >-
+  Lead Software Engineer with 10 years designing and scaling business-critical,
+  distributed backend systems in Go and Python. At HungerStation (Delivery Hero)
+  I build and operate Growth-domain services (Rewards, Offer, Subscription,
+  Loyalty) handling **billions of requests per month** at peaks of **8k to 10k
+  RPS** with **99.97%+ server-side success**. Key contributor to a multi-year
+  migration of the Offer service onto Delivery Hero's core GIS platform, and
+  creator of an AI-native reliability platform now in production across the
+  Growth domain and rolling out organization-wide. Previously led a
+  legacy-monolith-to-microservices migration with **zero-downtime** data
+  migration, and authored microservice standards adopted organization-wide.
+  Raises the engineering bar through system-design and testing standards,
+  mentoring senior engineers, and aligning technical roadmaps with business
+  goals.
+
+# Personal side projects — rendered ONLY on the HTML site (GitHub Pages).
+# The PDF and Markdown outputs ignore this block. Each link's `icon` selects an
+# inline SVG glyph: github | neovim | terminal (default: github).
+personal_projects:
+  intro: >-
+    I'm a bit obsessed with **customization** and **automation**: I live in the
+    terminal and love tuning every tool until it feels like an extension of my
+    hands. My latest private project is an AI-native development harness. When
+    I'm not shipping backend systems, I'm sharpening my own development
+    environment.
+  links:
+    - name: GogoNvim
+      url: https://github.com/georgemessiha22/GogoNvim
+      description: My from-scratch **Neovim** configuration as plugin, tuned for fast, keyboard-driven development.
+      icon: neovim
+    - name: dotfiles
+      url: https://github.com/georgemessiha22/dotfiles
+      description: My portable terminal and system setup — shell, editor, and tooling, reproducible on any machine.
+      icon: terminal
+    - name: Protflio Builder
+      url: https://github.com/georgemessiha22/georgemessiha22.github.io
+      description: My resume/Website builder automation, automating building my resume into different backed types (Latex -> pdf, Typst -> pdf, Markdown and Github pages) with variants (Summary, Detailed) from single source of truth `resume.yaml` file. making it easier to make/publish changes through github actions build artifacts.
+      icon: github
+
+experience:
+  - role: Senior Software Engineer
+    org: HungerStation (Delivery Hero)
+    org_url: https://hungerstation.com
+    location: Dubai, UAE
+    mode: Hybrid
+    start: Nov 2023
+    end: Present
+    intro: >-
+      Senior engineer in the Growth domain of one of the region's largest
+      food-delivery platforms. Worked across three teams (Acquisition, Martech,
+      Subscription & Loyalty, 2 to 10 engineers each), owning Go microservices
+      that serve billions of requests per month (including a Rewards endpoint
+      peaking near 8k RPS) on a Go-based platform alongside a Ruby on Rails
+      monolith, with a focus on stability, resilience, and cross-team developer
+      experience.
+    bullets:
+      - Key contributor to the multi-year (2+ years, ongoing), **zero-downtime** migration of the HungerStation Offer service onto Delivery Hero's core **GIS** platform. Owned the data-migration layer, designing the data mapping and building the create/update hooks that sync offer data into GIS, the foundation the rest of the migration, including the read-path work led by other engineers, builds on. Planned contingencies for every step and deployed monitors, alerts, runbooks, and rollback feature flags so the migration could proceed safely on live production traffic with zero downtime.
+      - Built the **AI-native platform reliability tool**, now in production across the Growth domain and being adopted organization-wide (about 40 services). Combines a low-cost LLM with a codebase index-graph analyzer to map each service's external dependencies (circuit breakers, retries, timeouts, connection pools), server routes, and SQL configurations, then correlates them with live Grafana metrics to generate risk reports that teams use to drive their reliability technical OKRs.
+      - Architected new core **Go** services that streamlined inter-service communication and reduced integration complexity across teams.
+      - Accelerated developer velocity by **cutting build times for a key service by 60%** through CI pipeline and build-process optimization.
+      - Strengthened reliability and release confidence through improved monitoring and distributed tracing for rapid root-cause diagnosis, and a testing initiative covering functional, integration, chaos, and stress tests.
+    variants: [summary, detailed]
+
+  - role: Lead Software Engineer
+    org: Fincompare
+    org_url: https://www.fincompare.de
+    location: Berlin, Germany
+    mode: Remote
+    start: May 2022
+    end: August 2023
+    intro: >-
+      Led a team of 4 engineers migrating a legacy Python/Django monolith to a
+      scalable Go microservices architecture.
+    bullets:
+      - Spearheaded the design and delivery of high-performance Go microservices, migrating business logic and data from the **Python** monolith.
+      - Engineered a **zero-downtime** data migration from the Django application to the new Go services, preserving full data integrity.
+      - Re-architected obsolete legacy code in Go, **improving core system performance by over ~50%**.
+      - Mentored the team on Go idioms, microservice patterns, and testing strategy, raising overall code quality.
+      - Defined the technical interview process and hiring bar.
+    variants: [summary, detailed]
+
+  - role: Senior Software Engineer
+    org: Creatio
+    org_url: https://www.creatio.com.au
+    location: North Sydney, Australia
+    mode: Remote
+    start: Mar 2021
+    end: August 2022
+    intro: >-
+      Developed and maintained web applications and infrastructure; lifted team
+      delivery quality through pair programming, code review, and technical
+      mentoring.
+    bullets:
+      - Mentored junior and mid-level engineers via pair programming, code reviews, and technical discussions, improving team-wide skill and delivery quality.
+      - Authored and championed microservice development standards that were adopted across the engineering organization, improving service reliability.
+    variants: [summary, detailed]
+
+  - role: Senior Software Engineer
+    org: Huspy
+    org_url: https://www.huspy.com
+    location: Dubai, UAE
+    mode: Contract
+    start: Aug 2021
+    end: May 2022
+    intro: >-
+      PropTech platform that facilitates home mortgages, helping customers find
+      the best mortgages available. Developed and architected the backend.
+    bullets:
+      - Developed and architected backend infrastructure for a fast-scaling PropTech platform.
+      - Created migration plans to keep pace with rapid market changes and product expansion.
+      - Contributed to the company's new-hire onboarding processes and conducted technical interviews for potential hires.
+    variants: [detailed]
+
+  - role: Senior Software Engineer
+    org: Orange Business Services
+    org_url: https://www.orange-business.com/en
+    location: Cairo, EG
+    mode: Fulltime
+    start: Sep 2018
+    end: Mar 2021
+    intro: >-
+      Built data-intensive applications and reporting tools for enterprise
+      clients, including Orange's first automated SLA reporting tool later became the
+      official tool for generating client SLA reports.
+    bullets:
+      - Built the company's first automated SLA reporting tool, significantly reducing report-generation time for clients.
+      - Engineered backend services to retrieve, process, and expose **terabyte-scale** data via APIs, using distributed processing frameworks (Hadoop, Spark).
+      - Led a team in data collection and cleaning for clients and identified system-efficiency improvements.
+      - Led technical interviews and mentored junior engineers, contributing to the growth of the engineering team.
+    variants: [summary, detailed]
+
+  - role: Software Engineer
+    org: PayMob
+    org_url: https://paymob.com/en
+    location: Cairo, EG
+    mode: Fulltime
+    start: Jul 2017
+    end: Jul 2018
+    intro: >-
+      PayMob is Egypt's largest mobile-wallet infrastructure. Contributed to the
+      Vodafone Cash backend, using cloud-based solutions.
+    bullets:
+      - Developed cloud-based backend components for a high-volume mobile-wallet system, improving transaction-processing performance.
+      - Raised software quality by introducing testing plans and quality gates into the delivery process.
+    variants: [summary, detailed]
+
+  - role: Freelance Software Engineer
+    org: Nexus Edge
+    location: Sao Paulo, Brazil
+    mode: Freelance
+    start: Dec 2017
+    end: Dec 2017
+    intro: >-
+      Short (1-month) freelance engagement contributing to a marketing-AI
+      product and supporting remote development coordination.
+    variants: [detailed]
+
+  - role: Software Engineer
+    org: BlueCloud Technologies
+    org_url: https://www.bluecloudcorp.com/
+    location: Cairo, EG
+    mode: Fulltime
+    start: Feb 2017
+    end: Jun 2017
+    intro: >-
+      Designed, developed, and maintained MS-Office extensions using MS .NET
+      technologies.
+    bullets:
+      - Developed comprehensive unit tests that measurably reduced defects found during Quality Control testing.
+      - Built and installed solutions to well-defined system specifications and standards, ensuring seamless integration with Microsoft Word.
+      - Applied SaaS and cloud-computing patterns to improve software efficiency and scalability.
+    variants: [summary, detailed]
+
+  - role: Software Engineer
+    org: Aprcot
+    location: Cairo, EG
+    mode: Fulltime
+    start: Jun 2016
+    end: Jan 2017
+    intro: >-
+      Built a tool to automate advertising campaigns across major social
+      platforms (Facebook, Google, Instagram, YouTube). It monitored campaign
+      progress, generated performance alerts, and selected budget-optimal
+      strategies to hit target metrics, using RESTful APIs and machine-learning
+      techniques.
+    bullets:
+      - Developed, tested, debugged, and maintained the automated campaign-management tool.
+    variants: [summary, detailed]
+
+  - role: Junior Teaching Assistant
+    org: The German University in Cairo
+    location: Cairo, EG
+    start: Sep 2015
+    end: Jan 2016
+    intro: >-
+      Assisted in teaching Android application development, helping students
+      complete tasks on time, resolve issues, and build the skills they needed.
+    variants: [detailed]
+
+  - role: Network Engineer Trainee
+    org: Orange Egypt
+    url: https://github.com/georgemessiha22/georgemessiha22.github.io/blob/master/build/assets/experience/internships/orange/Mobinil_Training_Certificate.PDF
+    location: Cairo, EG
+    start: Jul 2014
+    intro: "Performed system provisioning work. Main duties:"
+    bullets:
+      - Ran security analysis on network devices.
+      - Connected remotely to office devices for troubleshooting.
+      - Reviewed office firewall policies.
+    variants: [detailed]
+
+  - role: Sales & Representative Engineer Trainee
+    org: Xerox
+    url: https://github.com/georgemessiha22/georgemessiha22.github.io/blob/master/build/assets/experience/internships/xerox/Xerox_Training_Certificate.PDF
+    location: Cairo, EG
+    start: Aug 2014
+    intro: "Performed system administration work. Main duties:"
+    bullets:
+      - Established network connectivity to remote Xerox devices.
+      - Maintained IT requirements so devices adapted to network conditions.
+      - Built customized Xerox printer applications for clients.
+    variants: [detailed]
+
+education:
+  - role: Bachelor of Networks and Information Engineering Technology
+    org: German University in Cairo
+    location: Cairo, EG
+    start: "2011"
+    end: "2016"
+    note: "Thesis: Security of Cloud Computing"
+
+  - role: Thanwya Amma (Egyptian High School Diploma), Math Science
+    org: Saint Fatima International School - Nasr City
+    location: Cairo, EG
+    start: "1997"
+    end: "2011"
+
+skills:
+  - category: Languages
+    items: [Go, Python, Bash]
+  - category: Backend & APIs
+    items: [gRPC, Go-Kit, Django]
+  - category: Distributed Systems & Infra
+    items:
+      - Kubernetes (k8s)
+      - Docker
+      - Docker-Compose
+      - Traefik
+      - Istio
+      - Cloudflare
+      - GCP
+      - AWS
+  - category: Observability
+    items: [OpenTelemetry, Prometheus, PGAnalyze, Grafana, DataDog]
+  - category: CI/CD & DevOps
+    items: [Github Actions, Drone-CI, ArgoCD, Continuous Delivery]
+  - category: OS & Tooling
+    items:
+      - Linux
+      - Git
+      - OpenAPI (Swagger)
+  - category: Leadership
+    items:
+      - System design
+      - Technical roadmapping
+      - Mentoring
+      - Design reviews
+      - Incident response
+  - category: AI & Automation
+    items: [Agentic development, LLM tooling, AI workflows]
+  - category: Sports
+    items:
+      - VolleyBall
+      - Tennis
+      - Squash
+
+languages:
+  - name: Arabic
+    level: Native
+  - name: English
+    level: Fluent
+
+certificates:
+  # ---- Summary set (appears in both resumes) ----
+  - title: Foundation of Project Management
+    org: Google
+    org_url: https://www.coursera.org/professional-certificates/google-project-management
+    cert_url: https://github.com/georgemessiha22/georgemessiha22.github.io/blob/master/build/assets/certificates_awards/project_management/foundations_of_project_management.pdf
+    location: Dubai, UAE
+    start: "2024"
+    end: "2024"
+    variants: [summary, detailed]
+
+  - title: Design Thinking for Microservices
+    org: SkillSoft
+    org_url: https://skillsoft.digitalbadges-eu.skillsoft.com/baffdb7e-a4ce-4b3c-aba0-4e15d4c2543e
+    cert_url: https://github.com/georgemessiha22/georgemessiha22.github.io/blob/master/build/assets/certificates_awards/skillsoft/design_thinking_for_microservices/3tw0pe4g_badge.png
+    location: Cairo, EG
+    start: "2020"
+    variants: [summary, detailed]
+
+  - title: "PeopleCert DevOps Fundamentals: Effectiveness & efficiency beyond comparison"
+    org: PeopleCert
+    org_url: https://candidate.peoplecert.org/
+    cert_url: https://github.com/georgemessiha22/georgemessiha22.github.io/blob/master/build/assets/certificates_awards/peopleCert/e-Cert.pdf
+    location: Cairo, EG
+    start: "2019"
+    variants: [summary, detailed]
+
+  - title: Deep Learning NanoDegree
+    org: Udacity, ITI
+    org_url: https://graduation.udacity.com/confirm/AYS9JCEY
+    cert_url: https://github.com/georgemessiha22/georgemessiha22.github.io/blob/master/build/assets/certificates_awards/deep_learning/udacity_deep_learning.pdf
+    location: Cairo, EG
+    start: "2018"
+    variants: [summary, detailed]
+
+  - title: Data Analyst
+    org: Udacity, 1 Million Arab Coder
+    cert_url: https://github.com/georgemessiha22/georgemessiha22.github.io/blob/master/build/assets/certificates_awards/data_analyst/data_analyst.pdf
+    location: Cairo, EG
+    start: "2018"
+    variants: [detailed]
+
+  - title: Data Scientist
+    org: DataCamp
+    org_url: https://www.datacamp.com/
+    cert_url: https://github.com/georgemessiha22/georgemessiha22.github.io/blob/master/build/assets/certificates_awards/data_camp/Tracks/Data Scientist.pdf
+    location: Cairo, EG
+    start: "2017"
+    end: "2018"
+    variants: [summary, detailed]
+
+  # ---- Detailed only ----
+  - title: Android Fundamentals
+    org: Udacity, ITI
+    cert_url: https://github.com/georgemessiha22/georgemessiha22.github.io/blob/master/build/assets/certificates_awards/android/Android_certificate.pdf
+    location: Cairo, EG
+    start: "2016"
+    variants: [detailed]
+
+  # DataCamp — Tracks (detailed only)
+  - title: Python Programming
+    org: DataCamp
+    org_url: https://www.datacamp.com/
+    cert_url: https://github.com/georgemessiha22/georgemessiha22.github.io/blob/master/build/assets/certificates_awards/data_camp/Tracks/Python Programming.pdf
+    location: Cairo, EG
+    start: "2017"
+    end: "2018"
+    group: Tracks
+    variants: [detailed]
+
+  - title: Python Programmer
+    org: DataCamp
+    org_url: https://www.datacamp.com/
+    cert_url: https://github.com/georgemessiha22/georgemessiha22.github.io/blob/master/build/assets/certificates_awards/data_camp/Tracks/Python Programmer.pdf
+    location: Cairo, EG
+    start: "2017"
+    end: "2018"
+    group: Tracks
+    variants: [detailed]
+
+  - title: Importing Cleaning Data with Python
+    org: DataCamp
+    org_url: https://www.datacamp.com/
+    cert_url: https://github.com/georgemessiha22/georgemessiha22.github.io/blob/master/build/assets/certificates_awards/data_camp/Tracks/Importing _ Cleaning Data with Python .pdf
+    location: Cairo, EG
+    start: "2017"
+    end: "2018"
+    group: Tracks
+    variants: [detailed]
+
+  - title: Data Manipulation with Python
+    org: DataCamp
+    org_url: https://www.datacamp.com/
+    cert_url: https://github.com/georgemessiha22/georgemessiha22.github.io/blob/master/build/assets/certificates_awards/data_camp/Tracks/Data Manipulation with Python.pdf
+    location: Cairo, EG
+    start: "2017"
+    end: "2018"
+    group: Tracks
+    variants: [detailed]
+
+  - title: Data Analyst with Python
+    org: DataCamp
+    org_url: https://www.datacamp.com/
+    cert_url: https://github.com/georgemessiha22/georgemessiha22.github.io/blob/master/build/assets/certificates_awards/data_camp/Tracks/Data Analyst with Python.pdf
+    location: Cairo, EG
+    start: "2017"
+    end: "2018"
+    group: Tracks
+    variants: [detailed]
+
+  - title: Machine Learning with Python Track
+    org: DataCamp
+    org_url: https://www.datacamp.com/
+    cert_url: https://github.com/georgemessiha22/georgemessiha22.github.io/blob/master/build/assets/certificates_awards/data_camp/Tracks/Machine Learning with Python Track.pdf
+    location: Cairo, EG
+    start: "2017"
+    end: "2018"
+    group: Tracks
+    variants: [detailed]
+
+  - title: Data Science
+    org: DataCamp
+    org_url: https://www.datacamp.com/
+    cert_url: https://github.com/georgemessiha22/georgemessiha22.github.io/blob/master/build/assets/certificates_awards/data_camp/Tracks/Data Scientist .pdf
+    location: Cairo, EG
+    start: "2017"
+    end: "2018"
+    group: Tracks
+    variants: [detailed]
+
+activities:
+  - role: Charitable NGO
+    org: Masabeeh
+    location: Cairo, EG
+    start: May 2016
+    end: "2017"
+    intro: >-
+      Organized weekly meetings for children in Masr Gedida, ran game-based
+      workshops, helped with schoolwork, and taught Arabic language, Math and Science.
+    variants: [summary, detailed]
+
+  - role: Voluntary Education
+    org: Math Teacher
+    location: Cairo, EG
+    start: Sep 2015
+    end: Dec 2015
+    intro: >-
+      Provided education for children from rural areas — teaching Math to fifth-
+      grade students and English to second-grade students.
+    variants: [detailed]
+
+  - role: Culture Awareness Charitable NGO
+    org: APE (Association for Protection of Environment)
+    location: Cairo, EG
+    start: "2013"
+    end: "2015"
+    intro: >-
+      Organized camps for children from rural areas, ran craft workshops, and
+      gave presentations on culture awareness, self-esteem, goal-setting, and
+      personal development.
+    variants: [summary, detailed]
+
+  - role: Educational Charitable NGO
+    org: EASE
+    location: Cairo, EG
+    start: Jan 2012
+    end: May 2012
+    intro: >-
+      Organized camps for high-school students as a presenter, sharing life
+      experiences and helping prepare them for the future.
+    variants: [detailed]

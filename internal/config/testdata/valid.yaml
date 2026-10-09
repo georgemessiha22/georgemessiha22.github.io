@@ -1,0 +1,48 @@
+contact:
+  firstname: George
+  lastname: Messiha
+  title: Lead Software Engineer
+  email: g@example.com
+  phone: "(+971) 54 555 1032"
+  location: "Dubai, UAE"
+  photo: build/assets/pictures/61673.jpg
+  socials:
+    github: georgemessiha22
+    linkedin: georgemessiha22
+summary: A short summary.
+experience:
+  - role: Senior Software Engineer
+    org: HungerStation
+    org_url: https://hungerstation.com
+    location: Dubai, UAE
+    mode: Hybrid
+    start: Nov 2023
+    end: Present
+    variants: [summary, detailed]
+    intro: Did things.
+    bullets:
+      - "Built **Go** services."
+skills:
+  - category: Languages
+    items: [Go, Python]
+languages:
+  - name: Arabic
+    level: Native
+certificates:
+  - title: Foundation of Project Management
+    org: Google
+    cert_url: https://example.com/cert.pdf
+    start: "2024"
+    end: "2024"
+    variants: [summary, detailed]
+personal_projects:
+  intro: I love **automation**.
+  links:
+    - name: GogoNvim
+      url: https://github.com/georgemessiha22/GogoNvim
+      description: My **Neovim** config.
+      icon: neovim
+    - name: dotfiles
+      url: https://github.com/georgemessiha22/dotfiles
+      description: My terminal setup.
+      icon: terminal

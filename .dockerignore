@@ -1,0 +1,6 @@
+# The Docker image only needs build/entrypoint.sh (see build/Dockerfile COPY).
+# Ignore everything else so the build context stays tiny and reproducible.
+*
+!build
+build/*
+!build/entrypoint.sh

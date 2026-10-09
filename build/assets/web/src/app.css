@@ -1,0 +1,283 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+	--radius: 0.65rem;
+
+	--background: hsl(0 0% 100%);
+	--foreground: hsl(222 22% 12%);
+
+	--card: hsl(0 0% 100%);
+	--card-foreground: hsl(222 22% 12%);
+
+	--popover: hsl(0 0% 100%);
+	--popover-foreground: hsl(222 22% 12%);
+
+	--primary: hsl(192 84% 38%);
+	--primary-foreground: hsl(0 0% 100%);
+
+	--secondary: hsl(200 55% 96%);
+	--secondary-foreground: hsl(200 30% 25%);
+
+	--muted: hsl(210 20% 96%);
+	--muted-foreground: hsl(215 16% 47%);
+
+	--accent: hsl(190 70% 93%);
+	--accent-foreground: hsl(195 45% 22%);
+
+	--destructive: hsl(0 72% 51%);
+	--destructive-foreground: hsl(0 0% 100%);
+
+	--border: hsl(214 20% 90%);
+	--input: hsl(214 20% 90%);
+	--ring: hsl(190 80% 45%);
+
+	/* Baby-blue -> turquoise "Soft" accent gradient endpoints. */
+	--grad-from: hsl(199 92% 74%); /* #7dd3fc */
+	--grad-to: hsl(172 66% 50%); /* #2dd4bf */
+	--grad-ink: hsl(190 80% 12%);
+}
+
+.dark {
+	--background: hsl(220 40% 8%);
+	--foreground: hsl(195 30% 92%);
+
+	--card: hsl(220 34% 10%);
+	--card-foreground: hsl(195 30% 92%);
+
+	--popover: hsl(220 34% 10%);
+	--popover-foreground: hsl(195 30% 92%);
+
+	--primary: hsl(185 72% 58%);
+	--primary-foreground: hsl(200 45% 10%);
+
+	--secondary: hsl(218 28% 16%);
+	--secondary-foreground: hsl(195 30% 88%);
+
+	--muted: hsl(218 28% 16%);
+	--muted-foreground: hsl(215 20% 65%);
+
+	--accent: hsl(200 40% 16%);
+	--accent-foreground: hsl(190 60% 80%);
+
+	--destructive: hsl(0 62% 52%);
+	--destructive-foreground: hsl(0 0% 100%);
+
+	--border: hsl(218 24% 18%);
+	--input: hsl(218 24% 18%);
+	--ring: hsl(185 70% 55%);
+
+	--grad-from: hsl(199 90% 68%);
+	--grad-to: hsl(172 66% 52%);
+	--grad-ink: hsl(200 50% 10%);
+}
+
+@theme inline {
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-card: var(--card);
+	--color-card-foreground: var(--card-foreground);
+	--color-popover: var(--popover);
+	--color-popover-foreground: var(--popover-foreground);
+	--color-primary: var(--primary);
+	--color-primary-foreground: var(--primary-foreground);
+	--color-secondary: var(--secondary);
+	--color-secondary-foreground: var(--secondary-foreground);
+	--color-muted: var(--muted);
+	--color-muted-foreground: var(--muted-foreground);
+	--color-accent: var(--accent);
+	--color-accent-foreground: var(--accent-foreground);
+	--color-destructive: var(--destructive);
+	--color-destructive-foreground: var(--destructive-foreground);
+	--color-border: var(--border);
+	--color-input: var(--input);
+	--color-ring: var(--ring);
+
+	--radius-lg: var(--radius);
+	--radius-md: calc(var(--radius) - 2px);
+	--radius-sm: calc(var(--radius) - 4px);
+
+	--font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+	--font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+@layer base {
+	* {
+		border-color: var(--border);
+	}
+	html {
+		scroll-behavior: smooth;
+	}
+	body {
+		background-color: var(--background);
+		color: var(--foreground);
+		font-feature-settings: 'rlig' 1, 'calt' 1;
+	}
+}
+
+@utility container {
+	margin-inline: auto;
+	padding-inline: 1.5rem;
+	max-width: 64rem;
+}
+
+@layer components {
+	.accent-gradient {
+		background-image: linear-gradient(135deg, var(--grad-from), var(--grad-to));
+		color: var(--grad-ink);
+	}
+	.accent-text {
+		background-image: linear-gradient(135deg, var(--grad-from), var(--grad-to));
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
+	}
+	.hero-wash {
+		background-image: linear-gradient(
+			135deg,
+			color-mix(in oklab, var(--grad-from) 18%, transparent),
+			color-mix(in oklab, var(--grad-to) 16%, transparent)
+		);
+	}
+}
+
+/* Blog post typography (rendered markdown). */
+.prose-post {
+	color: var(--foreground);
+	line-height: 1.7;
+}
+.prose-post h1,
+.prose-post h2,
+.prose-post h3 {
+	font-weight: 600;
+	line-height: 1.25;
+	margin: 1.6em 0 0.6em;
+	letter-spacing: -0.01em;
+}
+.prose-post h1 {
+	font-size: 1.6rem;
+}
+.prose-post h2 {
+	font-size: 1.3rem;
+}
+.prose-post h3 {
+	font-size: 1.1rem;
+}
+.prose-post p {
+	margin: 0.9em 0;
+}
+.prose-post a {
+	color: var(--primary);
+	text-decoration: underline;
+	text-underline-offset: 2px;
+}
+.prose-post ul,
+.prose-post ol {
+	margin: 0.9em 0;
+	padding-left: 1.4em;
+}
+.prose-post li {
+	margin: 0.35em 0;
+}
+.prose-post img {
+	border-radius: var(--radius);
+	border: 1px solid var(--border);
+	max-width: 100%;
+	height: auto;
+	margin: 1.2em 0;
+}
+.prose-post blockquote {
+	border-left: 3px solid var(--primary);
+	padding-left: 1em;
+	color: var(--muted-foreground);
+	margin: 1.1em 0;
+}
+.prose-post code {
+	font-family: var(--font-mono);
+	font-size: 0.875em;
+	background: var(--muted);
+	padding: 0.15em 0.4em;
+	border-radius: 6px;
+}
+.prose-post pre {
+	background: var(--muted);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	padding: 1em 1.1em;
+	overflow-x: auto;
+	margin: 1.2em 0;
+}
+.prose-post pre code {
+	background: transparent;
+	padding: 0;
+	font-size: 0.85em;
+}
+
+/* Per-code-block word-wrap toggle (added client-side on the blog post page). */
+.prose-post pre.code-block {
+	position: relative;
+}
+.code-wrap-toggle {
+	position: sticky;
+	top: 0;
+	right: 0;
+	display: block;
+	width: fit-content;
+	margin-left: auto;
+	margin-bottom: 0.6em;
+	font-family: var(--font-sans);
+	font-size: 11px;
+	line-height: 1;
+	padding: 0.3rem 0.55rem;
+	border: 1px solid var(--border);
+	border-radius: 6px;
+	background: var(--card);
+	color: var(--muted-foreground);
+	cursor: pointer;
+	transition: color 0.15s, border-color 0.15s;
+}
+.code-wrap-toggle:hover {
+	color: var(--foreground);
+	border-color: var(--ring);
+}
+.prose-post pre.code-block.wrap {
+	white-space: pre-wrap;
+	word-break: break-word;
+	overflow-x: hidden;
+}
+
+/* Line numbers: each line is a two-cell flex row (number + code) so wrapped
+   code stays in the code column and never mixes with the numbers. Numbers use
+   a CSS counter (generated content, so they aren't copied with the code). */
+.prose-post pre.with-line-numbers code {
+	counter-reset: line;
+	display: block;
+}
+.prose-post .code-line {
+	display: flex;
+	counter-increment: line;
+}
+.prose-post .code-ln {
+	flex: 0 0 var(--ln-width, 3ch);
+	padding-right: 1rem;
+	text-align: right;
+	color: var(--muted-foreground);
+	opacity: 0.55;
+	user-select: none;
+	-webkit-user-select: none;
+}
+.prose-post .code-ln::before {
+	content: counter(line);
+}
+.prose-post .code-txt {
+	flex: 1 1 auto;
+	white-space: pre;
+}
+.prose-post pre.with-line-numbers.wrap .code-txt {
+	min-width: 0;
+	white-space: pre-wrap;
+	word-break: break-word;
+	overflow-wrap: anywhere;
+}

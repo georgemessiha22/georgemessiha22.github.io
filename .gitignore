@@ -1,0 +1,14 @@
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+dist/
+
+# Go
+/build/gen/
+*.test
+# Superpowers brainstorm artifacts
+.superpowers/
+docs/superpowers/

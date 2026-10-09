@@ -1,0 +1,99 @@
+#import "@preview/modern-cv:0.10.0": *
+
+#show: resume.with(
+  author: (
+    firstname: "{{ q .Contact.Firstname }}",
+    lastname: "{{ q .Contact.Lastname }}",
+    email: "{{ q .Contact.Email }}",
+    phone: "{{ q .Contact.Phone }}",
+{{- if .SiteURL }}
+    homepage: "{{ q .SiteURL }}",
+{{- end }}
+{{- if .Contact.Socials.GitHub }}
+    github: "{{ q .Contact.Socials.GitHub }}",
+{{- end }}
+{{- if .Contact.Socials.GitLab }}
+    gitlab: "{{ q .Contact.Socials.GitLab }}",
+{{- end }}
+{{- if .Contact.Socials.LinkedIn }}
+    linkedin: "{{ q .Contact.Socials.LinkedIn }}",
+{{- end }}
+    address: "{{ q .Contact.Location }}",
+    positions: ("{{ q .Contact.Title }}",),
+  ),
+  profile-picture: none, // image("assets/profile.jpg"),
+  date: datetime.today().display(),
+  language: "en",
+  colored-headers: true,
+  show-footer: false,
+  paper-size: "a4",
+  font: ("Source Sans 3",),
+)
+
+= Professional Summary
+
+#resume-item[
+  {{ emph .Summary }}
+]
+
+= Experience
+
+{{ range .Experience }}#resume-entry(
+  title: {{ if .URL }}link("{{ q .URL }}")[{{ esc .Role }}]{{ else }}"{{ q .Role }}"{{ end }},
+  location: "{{ q .Location }}{{ if .Mode }} · {{ q .Mode }}{{ end }}",
+  date: "{{ q .Start }}{{ if .End }} - {{ q .End }}{{ end }}",
+  description: {{ if .OrgURL }}smallcaps(link("{{ q .OrgURL }}")[{{ esc .Org }}]){{ else }}smallcaps("{{ q .Org }}"){{ end }},
+)
+{{ if or .Intro .Bullets }}#resume-item[
+{{- if .Intro }}
+  {{ emph .Intro }}
+{{- end }}
+{{- range .Bullets }}
+  - {{ emph . }}
+{{- end }}
+]
+{{ end }}
+{{ end -}}
+= Education
+
+{{ range .Education }}#resume-entry(
+  title: {{ if .URL }}link("{{ q .URL }}")[{{ esc .Role }}]{{ else }}"{{ q .Role }}"{{ end }},
+  location: "{{ q .Location }}",
+  date: "{{ q .Start }}{{ if .End }} - {{ q .End }}{{ end }}",
+  description: "{{ q .Org }}",
+)
+{{ if .Note }}#resume-item[
+  _{{ emph .Note }}_
+]
+{{ end }}
+{{ end -}}
+= Skills
+
+{{ range .Skills }}#resume-skill-item("{{ q .Category }}", ({{ range $i, $it := .Items }}{{ if $i }}, {{ end }}"{{ q $it }}"{{ end }},))
+{{ end }}
+= Languages
+
+{{ range .Languages }}#resume-skill-item("{{ q .Name }}", (strong("{{ q .Level }}"),))
+{{ end }}
+= Certificates & Awards
+
+{{ range .Certificates }}#resume-entry(
+  title: {{ if .CertURL }}link("{{ q .CertURL }}")[{{ esc .Title }}]{{ else }}"{{ q .Title }}"{{ end }},
+  location: "{{ q .Location }}",
+  date: "{{ q .Start }}{{ if .End }} - {{ q .End }}{{ end }}",
+  description: {{ if .OrgURL }}link("{{ q .OrgURL }}")[{{ esc .Org }}]{{ else }}"{{ q .Org }}"{{ end }},
+)
+{{ end -}}
+{{ if .Activities }}= Activities
+
+{{ range .Activities }}#resume-entry(
+  title: "{{ q .Role }}",
+  location: "{{ q .Location }}",
+  date: "{{ q .Start }}{{ if .End }} - {{ q .End }}{{ end }}",
+  description: "{{ q .Org }}",
+)
+{{ if .Intro }}#resume-item[
+  {{ emph .Intro }}
+]
+{{ end }}
+{{ end }}{{ end -}}

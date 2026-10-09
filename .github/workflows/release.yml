@@ -1,0 +1,89 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - master
+      - releases
+    paths-ignore:
+      - 'docs/**'
+      - 'LICENSE'
+      - 'README.md'
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          submodules: recursive
+
+      - name: Setup Go
+        uses: actions/setup-go@v7
+        with:
+          go-version: "1.26"
+      - name: Test
+        run: go test ./...
+
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: build/assets/web/package-lock.json
+
+      - name: Setup Typst
+        uses: typst-community/setup-typst@v5
+        with:
+          typst-version: "0.15.0"
+
+      - name: Build all artifacts (PDFs, Markdown, site)
+        run: make all
+
+      - name: Bump version and push tag
+        uses: mathieudutour/github-tag-action@v7
+        id: tags
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          create_annotated_tag: true
+          tag_prefix: ""
+
+      - name: Release
+        uses: softprops/action-gh-release@v3
+        with:
+          body: ${{ steps.tags.outputs.changelog }}
+          tag_name: ${{ steps.tags.outputs.new_tag }}
+          draft: false
+          prerelease: false
+          generate_release_notes: true
+          files: |
+            dist/George_Messiha_Resume.pdf
+            dist/George_Messiha_detailed_resume.pdf
+            dist/George_Messiha_Resume_v2.pdf
+            dist/George_Messiha_detailed_resume_v2.pdf
+            dist/George_Messiha_Resume.md
+            dist/George_Messiha_detailed_resume.md
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: build/gen/site
+
+  deploy-pages:
+    name: Deploy Pages
+    needs: release
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,338 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "resume.schema.json",
+  "title": "Resume",
+  "description": "Schema for resume.yaml (mirrors internal/config/load.go).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contact",
+    "experience"
+  ],
+  "properties": {
+    "contact": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "firstname": {
+          "type": "string",
+          "description": "First name."
+        },
+        "lastname": {
+          "type": "string",
+          "description": "Last name."
+        },
+        "title": {
+          "type": "string",
+          "description": "Professional title."
+        },
+        "email": {
+          "type": "string",
+          "description": "Email address."
+        },
+        "phone": {
+          "type": "string",
+          "description": "Phone number."
+        },
+        "location": {
+          "type": "string",
+          "description": "City, Country."
+        },
+        "photo": {
+          "type": "string",
+          "description": "Path to the photo file."
+        },
+        "socials": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "github": {
+              "type": "string",
+              "description": "GitHub username (not URL)."
+            },
+            "gitlab": {
+              "type": "string",
+              "description": "GitLab username (not URL)."
+            },
+            "linkedin": {
+              "type": "string",
+              "description": "LinkedIn username (not URL)."
+            }
+          },
+          "description": "Usernames per platform."
+        }
+      },
+      "description": "Header / personal information.",
+      "anyOf": [
+        {
+          "required": [
+            "firstname"
+          ]
+        },
+        {
+          "required": [
+            "lastname"
+          ]
+        }
+      ]
+    },
+    "summary": {
+      "type": "string",
+      "description": "Professional summary. Supports **bold**."
+    },
+    "experience": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/entry"
+      },
+      "minItems": 1,
+      "description": "Work experience."
+    },
+    "education": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/entry"
+      },
+      "description": "Education entries."
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/skillGroup"
+      }
+    },
+    "languages": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/language"
+      }
+    },
+    "certificates": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/cert"
+      }
+    },
+    "activities": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/entry"
+      },
+      "description": "Activities / volunteering."
+    },
+    "releases_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Base URL of release assets; enables the download dropdown."
+    },
+    "site_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Absolute URL of the published site."
+    },
+    "personal_projects": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "intro": {
+          "type": "string",
+          "description": "Intro paragraph. Supports **bold**."
+        },
+        "links": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/projectLink"
+          }
+        }
+      },
+      "description": "Side projects, HTML site only."
+    }
+  },
+  "$defs": {
+    "variants": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "summary",
+          "detailed"
+        ]
+      },
+      "description": "Which resumes include this entry. Omit to include in both."
+    },
+    "entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "role": {
+          "type": "string",
+          "description": "Job title / degree / activity role."
+        },
+        "org": {
+          "type": "string",
+          "description": "Organization / institution name."
+        },
+        "org_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Link on the organization name."
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Optional link on the title (e.g. certificate scan)."
+        },
+        "location": {
+          "type": "string",
+          "description": "City, Country."
+        },
+        "mode": {
+          "type": "string",
+          "description": "Employment mode, e.g. Hybrid, Remote, Fulltime, Contract, Freelance."
+        },
+        "start": {
+          "type": "string",
+          "description": "Start date, free-form (e.g. 'Nov 2023')."
+        },
+        "end": {
+          "type": "string",
+          "description": "End date, free-form (e.g. 'Present')."
+        },
+        "note": {
+          "type": "string",
+          "description": "Extra line, e.g. thesis."
+        },
+        "intro": {
+          "type": "string",
+          "description": "Paragraph before bullets. Supports **bold**."
+        },
+        "bullets": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Bullet points. Supports **bold**."
+        },
+        "variants": {
+          "$ref": "#/$defs/variants"
+        }
+      }
+    },
+    "skillGroup": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "category": {
+          "type": "string",
+          "description": "Skill group label."
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Skills in this group."
+        }
+      },
+      "required": [
+        "category",
+        "items"
+      ]
+    },
+    "language": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Language name."
+        },
+        "level": {
+          "type": "string",
+          "description": "Proficiency level."
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "cert": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Certificate or award title."
+        },
+        "org": {
+          "type": "string",
+          "description": "Issuing organization."
+        },
+        "org_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Link on the organization."
+        },
+        "cert_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Link to the certificate scan."
+        },
+        "location": {
+          "type": "string",
+          "description": "City, Country."
+        },
+        "start": {
+          "type": "string",
+          "description": "Start date, free-form."
+        },
+        "end": {
+          "type": "string",
+          "description": "End date, free-form."
+        },
+        "group": {
+          "type": "string",
+          "description": "Optional subsection, e.g. Courses / Tracks."
+        },
+        "variants": {
+          "$ref": "#/$defs/variants"
+        }
+      },
+      "required": [
+        "title"
+      ]
+    },
+    "projectLink": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Project name."
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Project URL."
+        },
+        "description": {
+          "type": "string",
+          "description": "Short description. Supports **bold**."
+        },
+        "icon": {
+          "enum": [
+            "github",
+            "neovim",
+            "terminal"
+          ],
+          "default": "github",
+          "description": "Inline SVG glyph."
+        }
+      },
+      "required": [
+        "name",
+        "url"
+      ]
+    }
+  }
+}
