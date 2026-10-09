@@ -1,0 +1,103 @@
+build/assets/web/src/lib/components/ui/dropdown-menu/dropdown-menu-content.svelte
+  s_a8a821ba440c46::t_8d8ade4b55964f 3
+build/assets/web/src/routes/+layout.svelte
+  s_a8a821ba440c46::t_8d8ade4b55964f 4-6
+build/assets/web/src/lib/components/ui/card/card-header.svelte
+  s_a8a821ba440c46::t_8d8ade4b55964f 2
+build/assets/web/src/lib/components/ui/dropdown-menu/dropdown-menu-item.svelte
+  s_a8a821ba440c46::t_8d8ade4b55964f 3
+build/assets/web/src/lib/components/ui/card/card-title.svelte
+  s_a8a821ba440c46::t_8d8ade4b55964f 2
+build/assets/web/src/routes/blog/+page.svelte
+  s_a8a821ba440c46::t_8d8ade4b55964f 2-4
+build/assets/web/package.json
+  s_a8a821ba440c46::t_28382023f411ae 21-22,24-30,32-33,35,39-40
+  s_a8a821ba440c46::t_70bdf191bad1a0 43
+  s_a8a821ba440c46::t_8d8ade4b55964f 6-9
+  s_a8a821ba440c46::t_59441e4468add5 34
+build/assets/web/src/lib/components/ui/dropdown-menu/dropdown-menu-group-heading.svelte
+  s_a8a821ba440c46::t_8d8ade4b55964f 3
+build/assets/web/tsconfig.json
+  s_a8a821ba440c46::t_2ef3b230c9fa00 12-13
+  s_a8a821ba440c46::t_d0e9ecdfc4e08b 5
+  s_a8a821ba440c46::t_8d8ade4b55964f 2
+README.md
+  s_a8a821ba440c46::t_39a8a8f48e421d 99
+build/assets/web/src/lib/components/Nav.svelte
+  s_a8a821ba440c46::t_8d8ade4b55964f 4
+  s_a8a821ba440c46::t_2ef3b230c9fa00 2,34
+build/assets/web/vite.config.ts
+  s_a8a821ba440c46::t_fe43c0f2c3abfc 14-21
+  s_a8a821ba440c46::t_9bbbb04220016a 1,3,5,9-13,23-24
+  s_a8a821ba440c46::t_8d8ade4b55964f 22
+build/assets/web/components.json
+  s_a8a821ba440c46::t_8d8ade4b55964f 8-12
+build/assets/web/src/lib/components/ui/card/card.svelte
+  s_a8a821ba440c46::t_8d8ade4b55964f 2
+build/assets/web/src/lib/components/DownloadMenu.svelte
+  s_a8a821ba440c46::t_8d8ade4b55964f 2-3,5
+build/assets/web/src/lib/components/ui/dropdown-menu/dropdown-menu-separator.svelte
+  s_a8a821ba440c46::t_8d8ade4b55964f 3
+build/assets/web/src/lib/components/TimelineList.svelte
+  s_a8a821ba440c46::t_8d8ade4b55964f 2
+build/assets/web/src/lib/components/ui/card/card-footer.svelte
+  s_a8a821ba440c46::t_8d8ade4b55964f 2
+build/assets/web/src/lib/components/ui/dropdown-menu/dropdown-menu-sub-content.svelte
+  s_a8a821ba440c46::t_8d8ade4b55964f 3
+build/assets/web/src/lib/posts.ts
+  s_a8a821ba440c46::t_8d8ade4b55964f 2
+build/assets/web/src/routes/+page.svelte
+  s_a8a821ba440c46::t_8d8ade4b55964f 2-9
+build/assets/web/src/lib/components/ui/dropdown-menu/dropdown-menu-radio-item.svelte
+  s_a8a821ba440c46::t_8d8ade4b55964f 4
+build/assets/web/src/lib/components/ui/card/card-description.svelte
+  s_a8a821ba440c46::t_8d8ade4b55964f 2
+build/assets/web/src/lib/components/ui/separator/separator.svelte
+  s_a8a821ba440c46::t_8d8ade4b55964f 3
+build/assets/web/src/routes/blog/[slug]/+page.svelte
+  s_a8a821ba440c46::t_8d8ade4b55964f 3-5
+build/assets/web/scripts/prepare.mjs
+  s_a8a821ba440c46::t_256e3bbef9dbcb 50-51
+build/assets/web/src/routes/timeline/+page.svelte
+  s_a8a821ba440c46::t_8d8ade4b55964f 2-6
+build/assets/web/src/lib/components/ui/button/button.svelte
+  s_a8a821ba440c46::t_8d8ade4b55964f 3
+build/assets/web/src/lib/components/Emph.svelte
+  s_a8a821ba440c46::t_8d8ade4b55964f 2
+build/assets/web/src/lib/components/ui/dropdown-menu/dropdown-menu-checkbox-item.svelte
+  s_a8a821ba440c46::t_8d8ade4b55964f 5
+build/assets/web/src/lib/components/ui/dropdown-menu/dropdown-menu-shortcut.svelte
+  s_a8a821ba440c46::t_8d8ade4b55964f 2
+build/assets/web/src/lib/components/ui/dropdown-menu/dropdown-menu-label.svelte
+  s_a8a821ba440c46::t_8d8ade4b55964f 2
+build/assets/web/src/lib/components/ThemeToggle.svelte
+  s_a8a821ba440c46::t_8d8ade4b55964f 4
+build/assets/web/src/lib/components/ui/badge/badge.svelte
+  s_a8a821ba440c46::t_8d8ade4b55964f 25
+build/assets/web/src/lib/components/ui/card/card-action.svelte
+  s_a8a821ba440c46::t_8d8ade4b55964f 2
+build/assets/web/src/routes/blog/[slug]/+page.ts
+  s_a8a821ba440c46::t_8d8ade4b55964f 2
+build/assets/web/src/lib/components/ui/card/card-content.svelte
+  s_a8a821ba440c46::t_8d8ade4b55964f 2
+build/assets/web/src/lib/components/ui/dropdown-menu/dropdown-menu-sub-trigger.svelte
+  s_a8a821ba440c46::t_8d8ade4b55964f 4
+build/assets/web/package-lock.json
+  s_a8a821ba440c46::t_34bb13e142b60a 12-13,16-17,19-25,27-30,131-134,137-138,148-151,161-163,165-168,176-180,182-185,193-197,199-202,204,210-214,216-219,221,227-231,233-236,238,245-248,250-253,255,259,265-268,270-273,275,279,285-288,290-293,295,299,305-308,310-313,325-328,330-333,345-348,350-353,366-368,370-373,382-385,387-390,400-402,404-407,417-424,426,456-458,462-465,467-469,475,479-482,504-506,511-513,516,519-520,549-558,909-933,960-962,966,968-970,1407-1409,1413,1473-1486,1567-1570,1574-1575,1578,1581-1598,1722-1756,1862-1864,1947-1949,1953-1957,1963,1972-1974,1976-1980,1989,1992,1995-1998,2024-2296
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "67632f7be8b72eddc76f0c9eaf73e018d4c08e93",
+  "prompts": {},
+  "sessions": {
+    "s_a8a821ba440c46": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_edf9a4660ffe5y2r5KWc27ECie",
+        "model": "claude-sonnet-5.5"
+      },
+      "human_author": "George Messiha <georgemessiha22@gmail.com>"
+    }
+  }
+}
