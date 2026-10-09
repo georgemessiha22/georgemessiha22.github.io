@@ -1,0 +1,36 @@
+.github/workflows/release.yml
+  s_2dda15ca7f37ea::t_f757081072fded 24,29,36,43,51,56,59,75
+internal/typst/templates/resume.typ.tmpl
+  s_2dda15ca7f37ea::t_f757081072fded 30
+internal/latex/templates/resume.tex.tmpl
+  s_2dda15ca7f37ea::t_f757081072fded 6,12
+Makefile
+  s_2dda15ca7f37ea::t_f757081072fded 23,28
+internal/latex/testdata/summary.tex.golden
+  s_2dda15ca7f37ea::t_f757081072fded 6,12
+resume.yaml
+  s_2dda15ca7f37ea::t_81df1d4695c6d5 32-43,50,52-53,64-67,78-84,88,104,108,140,152,261,269,271,273-281,291-294
+  s_2dda15ca7f37ea::t_12d23e6b061fa7 86-87,89-90,299
+  s_2dda15ca7f37ea::t_9bdf41f3bc2960 295-298
+  s_2dda15ca7f37ea::t_420c950c075962 300-302
+build/assets/web/package.json
+  s_2dda15ca7f37ea::t_f757081072fded 8,11
+internal/typst/testdata/summary.typ.golden
+  s_2dda15ca7f37ea::t_f757081072fded 21
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "bae1089b20aa7c52bbf6f1e7f08ea47612bbd5c4",
+  "prompts": {},
+  "sessions": {
+    "s_2dda15ca7f37ea": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_ee02393c4ffeYwyPy2OXwm25xE",
+        "model": "claude-sonnet-5.5"
+      },
+      "human_author": "George Messiha <georgemessiha22@gmail.com>"
+    }
+  }
+}
