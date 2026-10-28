@@ -24,7 +24,7 @@
     "@sveltejs/kit": "^3.0.1",
     "@sveltejs/vite-plugin-svelte": "^7.3.1",
     "@tailwindcss/vite": "^4.3.3",
-    "bits-ui": "^2.19.5",
+    "bits-ui": "^2.20.2",
     "mdsvex": "^0.12.8",
     "svelte": "^5.57.2",
     "svelte-check": "^4.7.6",
