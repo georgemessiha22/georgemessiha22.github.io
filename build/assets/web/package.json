@@ -28,7 +28,7 @@
     "mdsvex": "^0.12.8",
     "svelte": "^5.57.2",
     "svelte-check": "^4.7.6",
-    "tailwind-variants": "^3.3.1",
+    "tailwind-variants": "^4.0.1",
     "tailwindcss": "^4.3.3",
     "tslib": "^2.8.1",
     "typescript": "^6.0.0",
